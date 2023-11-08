@@ -45,5 +45,5 @@ void loop() {
 ```
 ## Colaboradores
 
-[Igor Matias](https://github.com/matzsis)
-[Lucila Gabriela](https://github.com/lucilagabriela)
+- [Igor Matias](https://github.com/matzsis)
+- [Lucila Gabriela](https://github.com/lucilagabriela)
