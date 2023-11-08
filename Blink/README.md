@@ -42,3 +42,8 @@ void loop() {
   digitalWrite(LED, LOW);
   delay(1000);
 }
+```
+## Colaboradores
+
+[Igor Matias](https://github.com/matzsis)
+[Lucila Gabriela](https://github.com/lucilagabriela)
