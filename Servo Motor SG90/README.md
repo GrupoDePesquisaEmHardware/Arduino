@@ -3,7 +3,7 @@
 
 ## Visão Geral
 
-Este README fornece informações sobre o servo motor SG90 9g, um componente crucial na robótica dinâmica. O servo motor converte energia elétrica em movimento mecânico preciso, sendo aplicável em projetos como garras robóticas e aeromodelismo.
+Este guia apresenta contem informações sobre o servo motor SG90 9g, que desempenha um papel essencial na robótica dinâmica. Este dispositivo responsável por converter energia elétrica em mecânica, sendo utilizado em projetos que exigem grande precisão, como garra robótica e aeromodelismo.
 
 ## Funcionamento do Servo Motor
 
@@ -23,9 +23,9 @@ Este README fornece informações sobre o servo motor SG90 9g, um componente cru
 
 ## Montagem do Circuito
 
-1. Conexão VCC do servo ao pino 5V do Arduino.
-2. Conexão GND do servo ao pino GND do Arduino.
-3. Conexão do sinal (amarelo) do servo a um pino digital PWM do Arduino.
+1. Conexão VCC (vermelho) do servo ao pino 5V do Arduino.
+2. Conexão GND (marrom) do servo ao pino GND do Arduino.
+3. Conexão do sinal (laranja) do servo a um pino digital PWM do Arduino.
 
 ## Código de Controle
 
