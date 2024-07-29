@@ -33,7 +33,8 @@ Os displays LCD (Liquid Crystal Display) os mais utilizados em projetos com micr
 
 ## Código
 
-''' #include <LiquidCrystal.h>
+'''
+#include <LiquidCrystal.h>
 
 LiquidCrystal lcd(2, 3, 4, 5, 6, 7);
 
@@ -67,4 +68,5 @@ void loop()
     lcd.clear();
   };
   
-} '''
+} 
+'''
