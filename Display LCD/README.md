@@ -2,11 +2,11 @@
 ![image](https://github.com/user-attachments/assets/dae99037-0c7d-4d7e-870d-4e7794564676)
 
 
-##Introdução
+## Introdução
 Os displays LCD (Liquid Crystal Display) os mais utilizados em projetos com microcontroladores são os displays LCD 16X2. Eles são muito úteis quando se precisa de uma resposta visual do que está sendo desenvolvido já que podem exibir caracteres, letras e números de forma nítida e clara. Esses displays contam com 16 colunas e 2 linhas, podendo ter sua luz de fundo (backlight) azul ou verde e as letras brancas ou pretas.
 
 
-##Materiais Necessários
+## Materiais Necessários
 - Placa Arduino Uno
 - Cabo de alimentação
 - Protoboard
@@ -16,7 +16,7 @@ Os displays LCD (Liquid Crystal Display) os mais utilizados em projetos com micr
 - 15 Jumpers macho-macho
 
 
-##Montagem do circuito
+## Montagem do circuito
 1. Pino VSS do display conectado à porta GND do Arduino.
 2. Pino VDD do display à porta VCC do Arduino.
 3. Pino V0 ao terminal central do potenciômetro, os outros terminais serão ligados um no VCC e outro no GND.
@@ -31,8 +31,7 @@ Os displays LCD (Liquid Crystal Display) os mais utilizados em projetos com micr
 12. Pino K à porta GND.
 
 
-##Código
-
+## Código
 
 '''
 #include <LiquidCrystal.h>
