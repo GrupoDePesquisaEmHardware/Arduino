@@ -32,7 +32,7 @@ Os displays LCD (Liquid Crystal Display) os mais utilizados em projetos com micr
 
 
 ## Código
-```
+```ruby
 #include <LiquidCrystal.h>
 
 LiquidCrystal lcd(2, 3, 4, 5, 6, 7);
