@@ -1,22 +1,26 @@
 # Repositório do Sensor LDR - Fotoresistor
 
 ## Introdução
-Você já ouviu falar sobre o sensor LDR? O sensor "Resistor Dependente de Luz" (LDR), conhecido por sua sigla em inglês, é um dispositivo que mede a intensidade da luz. Ele é comumente encontrado em postes de energia, acendendo quando detecta a ausência de luz solar.
+
+   Você já ouviu falar sobre o sensor LDR? O sensor “Resistor Dependente de Luz” ("Light Dependent Resistor"), mais conhecido por sua sigla LDR, é um sensor que mede a intensidade da luz. Nós podemos encontrar esse tipo de sensor em poste de energia, por exemplo, que acende quando percebe a ausência de luz solar.
 
 ![LDR](https://i.pinimg.com/564x/cc/73/8f/cc738f4ab7ee4489361d7685118690b4.jpg)
 
-O LDR é composto por um material semicondutor, geralmente sulfeto de cádmio (CdS), que varia sua resistência conforme a intensidade de luz incidente. Sua resistência diminui com a maior incidência de luz, permitindo uma maior corrente no circuito.
+O sensor LDR é feito de um material semicondutor,ou seja, material que possui características de condução elétrica intermediárias entre materiais condutores (como metais) e isolantes, normalmente, sulfeto de cádmio (CdS), que tem a  propriedade de variar sua resistência de acordo com a intensidade de luz que incide sobre ele. Assim, quanto mais luz incide sobre o LDR menor sua resistência e maior a quantidade de corrente é permitido passar para o circuito. Desse modo, como um resistor comum, o mesmo não possui polaridade (lado positivo ou negativo definidos) e sua resistência é medida em ohms(Ω).
 
 ![Fluxo de Corrente](https://www.kitsarduino.com.br/imagens/ldr-arduino-pg2.png)
 
 ## Entendendo o LDR a nível atômico
-Para compreender melhor o funcionamento, é necessário conhecer alguns conceitos químicos:
+Para entender melhor essa parte, primeiro temos que entender alguns conceitos químicos:                                                                            
+									
+Elétron: é a partícula subatômica de carga negativa que se encontra na parte externa do átomo (eletrosfera).
 
-- Elétron: Partícula subatômica de carga negativa na eletrosfera.
-- Camada de Valência: Camada mais afastada do núcleo com menor nível de energia.
-- Camada de Condução: Região com elétrons livres e maior nível de energia.
+Camada de valência: é a camada mais afastada do núcleo e que apresenta um nível de energia mais baixo.
+Camada de condução: é a região que fica os 	elétrons livres e que apresenta um nível de energia mais alto.
 
-A luz, composta por fótons, ao atingir o LDR, faz com que elétrons absorvam energia, movendo-se da camada de valência para a camada de condução. Isso resulta em uma menor resistência do LDR, permitindo maior condução de energia.
+Agora sim, podemos começar!
+
+A luz é formada por fótons, partículas que transportam energia, ao atingir o sensor LDR esses fótons são absorvidos pelos elétrons do sulfeto de cádmio que estão na camada de valência, com isso os elétrons ficam excitados (com energia necessária para sair da camada de valência) e vão para a camada de condução, onde conseguem se mover livremente, o que permite uma maior condução de energia. Portanto, quanto mais luz atingir o sensor mais elétrons vão mudar de camada e menor será sua resistência.
 
 ## Materiais Necessários
 - Arduino UNO
