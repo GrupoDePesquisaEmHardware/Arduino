@@ -1,39 +1,105 @@
-# Repositório do Sensor LDR - Fotoresistor
+# LDR- Fotoresistor
 
-## Introdução
-Você já ouviu falar sobre o sensor LDR? O sensor "Resistor Dependente de Luz" (LDR), conhecido por sua sigla em inglês, é um dispositivo que mede a intensidade da luz. Ele é comumente encontrado em postes de energia, acendendo quando detecta a ausência de luz solar.
 
-![LDR](https://i.pinimg.com/564x/cc/73/8f/cc738f4ab7ee4489361d7685118690b4.jpg)
+   Você já ouviu falar sobre o sensor LDR? O sensor “Resistor Dependente de Luz” ("Light Dependent Resistor"), mais conhecido por sua sigla LDR, é um sensor que mede a intensidade da luz. Nós podemos encontrar esse tipo de sensor em poste de energia, por exemplo, que acende quando percebe a ausência de luz solar.
 
-O LDR é composto por um material semicondutor, geralmente sulfeto de cádmio (CdS), que varia sua resistência conforme a intensidade de luz incidente. Sua resistência diminui com a maior incidência de luz, permitindo uma maior corrente no circuito.
+**Imagem 1: LDR**
 
-![Fluxo de Corrente](https://www.kitsarduino.com.br/imagens/ldr-arduino-pg2.png)
+ ![LDR](https://www.eletrogate.com/sensor-fotoresistor-ldr-de-5mm?utm_source=Site&utm_medium=GoogleMerchant&utm_campaign=GoogleMerchant)
+*Fonte: https://www.eletrogate.com/sensor-fotoresistor-ldr-de-5mm?utm_source=Site&utm_medium=GoogleMerchant&utm_campaign=GoogleMerchant*
 
-## Entendendo o LDR a nível atômico
-Para compreender melhor o funcionamento, é necessário conhecer alguns conceitos químicos:
+                 
+O sensor LDR é feito de um material semicondutor,ou seja, material que possui características de condução elétrica intermediárias entre materiais condutores (como metais) e isolantes, normalmente, sulfeto de cádmio (CdS), que tem a  propriedade de variar sua resistência de acordo com a intensidade de luz que incide sobre ele. Assim, quanto mais luz incide sobre o LDR menor sua resistência e maior a quantidade de corrente é permitido passar para o circuito. Desse modo, como um resistor comum, o mesmo não possui polaridade (lado positivo ou negativo definidos) e sua resistência é medida em ohms(Ω).
 
-- Elétron: Partícula subatômica de carga negativa na eletrosfera.
-- Camada de Valência: Camada mais afastada do núcleo com menor nível de energia.
-- Camada de Condução: Região com elétrons livres e maior nível de energia.
+**Imagem 2: Fluxo de corrente**
+![Fluxo de corrente](https://www.kitsarduino.com.br/cmp/ldr.html)
+*Fonte: https://www.kitsarduino.com.br/cmp/ldr.html*
 
-A luz, composta por fótons, ao atingir o LDR, faz com que elétrons absorvam energia, movendo-se da camada de valência para a camada de condução. Isso resulta em uma menor resistência do LDR, permitindo maior condução de energia.
 
-## Materiais Necessários
+
+## Entendendo o LDR a nível atômico:  
+
+Para entender melhor essa parte, primeiro temos que entender alguns conceitos químicos:                                                                            
+									
+- **Elétron:** é a partícula subatômica de carga negativa que se encontra na parte externa do átomo (eletrosfera).
+- **Camada de valência:** é a camada mais afastada do núcleo e que apresenta um nível de energia mais baixo.
+- **Camada de condução:** é a região que fica os elétrons livres e que apresenta um nível de energia mais alto.
+
+Agora sim, podemos começar!
+
+A luz é formada por fótons, partículas que transportam energia, ao atingir o sensor LDR esses fótons são absorvidos pelos elétrons do sulfeto de cádmio que estão na camada de valência, com isso os elétrons ficam excitados (com energia necessária para sair da camada de valência) e vão para a camada de condução, onde conseguem se mover livremente, o que permite uma maior condução de energia. Portanto, quanto mais luz atingir o sensor mais elétrons vão mudar de camada e menor será sua resistência.
+
+## Materiais necessários
 - Arduino UNO
 - Protoboard
 - 1 LED
 - 8 Jumpers
 - Cabo de alimentação do Arduino
-- 2 Resistores (10kΩ e 1kΩ)
-
-## Funcionamento do Circuito
-1. Alimente a protoboard conectando a fileira negativa ao GND e a fileira positiva ao 5V do Arduino.
-
-2. Conecte o LED: Cátodo (lado negativo) à fileira negativa com o resistor de 1kΩ. O ânodo (lado positivo) conectado à porta 4 do Arduino.
-
-3. Para o LDR, conecte o resistor de 10kΩ em uma perna e a outra perna à fileira de alimentação positiva. Conecte o LDR à porta A2 com um jumper e conecte a outra perna do resistor à fileira de alimentação negativa.
+- 2 Resistores (um de 10kΩ e um de 1kΩ)
 
 
->Observação: O LED acenderá na ausência de luz; para indicar a presença de luz, inverta as conexões das alimentações.
 
-Este repositório fornece informações sobre o sensor LDR e um guia para montagem do circuito com Arduino. Experimente e explore as possibilidades deste sensor versátil!
+Funcionamento do circuito:
+
+**Imagem 4: Circuito LDR**
+*(Fonte: Autoria própria (Tinkercad))*
+
+Para montar o circuito, vamos começar alimentando a protoboard ligando a fileira indicada com o sinal negativo ao GND do arduino e a fileira indicada com o sinal positivo no 5V. 
+Cuidado, se sua protoboard for um modelo maior, ela pode possuir uma divisória no meio dos pinos de alimentação. Assim, lembre-se de interligar as duas fileiras de alimentação para sobrepor a divisão.
+
+**Imagem 5: Conexão Protoboard**
+*(Fonte: Autoria própria (Tinkercad))*
+
+Após isso, vamos conectar o LED na fileira onde se encontra o lado negativo, normalmente com a perna mais curta, a um resistor de 1kΩ e na outra perna do resistor se conecta a fileira negativa da protoboard. Na outra perna do LED, o lado positivo, normalmente com a perna maior, nós vamos ligá-lo à porta 4 do arduino. Para o LDR vamos conectar o resistor de 10kΩ em uma perna e na outra vamos conectar na fileira de alimentação positiva da protoboard. Na mesma fileira vertical em que conectamos o resistor de 10kΩ devemos colocar um jumper ligando o LDR para a porta analógica A2 e da outra perna do resistor vamos ligar para a fileira de alimentação negativa.
+
+Vale ressaltar que essa configuração faz com que o led acenda com a ausência de luz, caso você queira que o led acenda indicando que tem luz você deve trocar os lados das alimentações, ou seja, a perna do resistor deve ser ligada na fileira positiva e a outra perna do LDR deve ser ligada na fileira negativa da protoboard.
+
+       
+**Imagem 6: Circuito LDR**
+*(Fonte: Autoria própria (Tinkercad))*
+
+
+## Código do circuito:
+
+Agora, vamos para a parte do código, nesta parte vamos aprender a programar nosso Arduino para poder usar o LDR. Vamos começar, primeiro declarando uma variável inteira com o nome “ValorSensor” e inicializá-la com o valor 0, essa prática é ideal para conseguir retirar ou eliminar resíduos dos compiladores. Em seguida, vamos utilizar o comando define para definir as variáveis LDR e LED que não poderão ser alteradas durante a execução do código, pois as conexões do LDR e LED não vão ser trocadas enquanto o código estiver em andamento.
+
+```cpp
+int ValorSensor = 0;
+int Valor=0;
+#define LED  4
+#define LDR A2
+```
+
+Agora vamos passar para a função setup(), inicializada apenas quando o Arduino é ligado ou reiniciado. Nesta parte do código, utilizamos da função pinMode() para definir o estado dos pinos do LDR e do LED. Sendo, o pino analógico do LDR definido como entrada e o pino digital do LED como saída.
+Temos também nosso monitor serial, uma ferramenta que nos permite enviar e transferir informações do Arduino para o computador ou vice versa. Para utilizá-la é preciso definir a taxa de transferência de bits entre o microcontrolador e o computador, utilizando do comando Serial.begin(9600). 
+
+```cpp
+void setup()
+{
+  pinMode(LDR, INPUT);
+  Serial.begin(9600);
+  pinMode(LED, OUTPUT);
+}
+``` 
+Finalmente, temos a função loop() que será executada até que o Arduino seja desligado ou reiniciado. 
+
+Em primeiro lugar, vamos utilizar o comando analogRead() para ler o valor do pino analógico especificado e armazenar o valor a cada leitura na nossa variável “ValorSensor”. Logo, temos em seguida o comando Serial.println() responsável por imprimir todos os dados coletados do LDR no monitor serial .
+
+Em segundo lugar, vamos aplicar a função map()  que permite levar um número de um intervalo para outro. Neste caso, estamos levando da faixa 0 a 1023 para a faixa 0 a 255 com o intuito de controlar o LED por PWM (Conferir o nosso post sobre PWM para mais informações)
+
+```cpp
+void loop()
+{
+  ValorSensor = analogRead(LDR);
+  Serial.println(ValorSensor);
+  Valor = map(ValorSensor, 0, 1023, 0, 255);
+  analogWrite(LED, Valor);
+ delay(100);
+}
+```
+
+Finalmente, por meio do nosso comando analogWrite() o qual envia o comando da tarefa a ser realizada, vamos conseguir mudar a intensidade do nosso LED de acordo com a intensidade de luz que o nosso LDR esteja recebendo.
+
+
+
+
