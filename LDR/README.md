@@ -5,7 +5,10 @@
 
 **Imagem 1: LDR**
 
- ![LDR](https://www.eletrogate.com/sensor-fotoresistor-ldr-de-5mm?utm_source=Site&utm_medium=GoogleMerchant&utm_campaign=GoogleMerchant)
+<div align="center">
+<img width="533" height="317" alt="Image" src="https://github.com/user-attachments/assets/5259701d-e2c3-4019-9c9c-0db485473154" />
+</div>
+
 *Fonte: https://www.eletrogate.com/sensor-fotoresistor-ldr-de-5mm?utm_source=Site&utm_medium=GoogleMerchant&utm_campaign=GoogleMerchant*
 
                  
