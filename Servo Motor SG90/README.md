@@ -1,10 +1,11 @@
  # Servo Motor  SG90 9G: Robótica Dinâmica
 Você já ouviu falar sobre servos motores? O servo motor é um dispositivo eletromecânico responsável por converter energia elétrica em mecânica, sendo utilizado em projetos que exigem grande precisão, como garra robótica e aeromodelismo. O deslocamento de servos, como o do modelo SG90 9g, se dá através de ângulos previamente determinados por código e o mesmo tende a se manter na mesma posição até que seja lhe dado outro comando.
 
-Imagem 1: Braço Robótico
-
-Fonte: https://www.smartkits.com.br/kit-braco-robotico-em-acrilico
-
+<div align="center">
+<h3>Imagem 1: Braço Robótico</h3>	
+<img width="400" height="300" alt="Image" src="https://github.com/user-attachments/assets/47f9f15a-2a10-44d3-8b29-bc4f3f5c153a" />
+<p>Fonte: https://www.smartkits.com.br/kit-braco-robotico-em-acrilico<p>
+</div>
 
 O deslocamento do servo é baseado em sistema integrado formado por um potenciômetro, circuito de controle, sistema de engrenagens e uma trava de segurança. Cada parte do sistema tem sua respectiva função, como detalhado a seguir:
 
@@ -15,9 +16,11 @@ Trava de segurança: consiste numa peça de plástico acoplada às engrenagens q
         
 A posição do servo se dá através da leitura de um sinal elétrico com largura de pulso que varia de 1 a 2 milissegundos. Esse tipo de sinal é chamado de PWM (do inglês, Pulse Width Modulation) e é responsável por definir o ângulo de rotação do nosso servo. Ficou confuso sobre o que é PWM? No momento, saiba que a largura desse pulso define um ângulo como apresentado na imagem a seguir. Para melhor compreensão desta etapa, confira aqui uma publicação detalhada sobre o assunto.
 
-Imagem 3: Sinais de controle do servo motor
-
-Fonte: https://forum.arduino.cc/t/creating-your-own-pwm-to-control-a-servo/129869
+<div align="center">
+<h3>Imagem 2: Sinais de controle do servo motor</h3>	
+<img width="450" height="264" alt="Image" src="https://github.com/user-attachments/assets/1f3eaee8-66de-4ff3-baf0-05ff942d73ec" />
+<p>Fonte: https://forum.arduino.cc/t/creating-your-own-pwm-to-control-a-servo/129869<p>
+</div>
 
 Agora que conhecemos o servo motor, vamos compreender o papel do Arduino para  o controle desse dispositivo. Para definir o seu movimento, utilizamos das portas digitais precedidas do símbolo “~" do microcontrolador. Essas portas possuem a função PWM quando definidas para funcionarem como saídas digitais, responsáveis por enviar os sinais elétricos que representam ângulos específicos no servo.
 
@@ -28,10 +31,11 @@ Agora que conhecemos o servo motor, vamos compreender o papel do Arduino para  o
 - Cabo de alimentação do Arduino 
 - Funcionamento do circuito
   
-Imagem 2: Circuito do Servo
-
-Fonte: autoria própria
-
+<div align="center">
+<h3>Imagem 3: Circuito do Servo</h3>	
+<img width="500" height="250" alt="Image" src="https://github.com/user-attachments/assets/b36b23af-b7f4-4c1f-8340-5ed89db1bf31" />
+<p>Fonte: autoria própria<p>
+</div>
 
 Para montar o circuito, vamos começar pela alimentação do servo. A entrada do meio do conector, geralmente marcada por um fio de cor vermelha, é conhecida como VCC, será conectada ao pino de 5V do Arduino. Em seguida, vamos conectar o GND, geralmente marcado por um fio marrom ou preto, que será conectado ao pino da placa marcado por esse mesmo nome. Feita essas conexões, já estamos fornecendo energia para o nosso servo.
 Por último, é preciso conectar a entrada do sinal, geralmente marcada por um fio amarelo, ao pino digital do Arduino. Lembrando que o pino precisa ser do tipo PWM, com a marcação “~" antes do número de identificação.
