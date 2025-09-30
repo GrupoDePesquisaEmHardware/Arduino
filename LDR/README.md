@@ -58,8 +58,11 @@ Funcionamento do circuito:
 Para montar o circuito, vamos começar alimentando a protoboard ligando a fileira indicada com o sinal negativo ao GND do arduino e a fileira indicada com o sinal positivo no 5V. 
 Cuidado, se sua protoboard for um modelo maior, ela pode possuir uma divisória no meio dos pinos de alimentação. Assim, lembre-se de interligar as duas fileiras de alimentação para sobrepor a divisão.
 
-**Imagem 5: Conexão Protoboard**
-*(Fonte: Autoria própria (Tinkercad))*
+<div align="center">
+<h3>Imagem 5: Conexão Protoboard</h3>	
+<img width="500" height="200" alt="Image" src="https://github.com/user-attachments/assets/52b7169a-82bb-4cab-a972-5551f471c6c2" />
+<p>*(Fonte: Autoria própria (Tinkercad))*<p>
+</div>
 
 Após isso, vamos conectar o LED na fileira onde se encontra o lado negativo, normalmente com a perna mais curta, a um resistor de 1kΩ e na outra perna do resistor se conecta a fileira negativa da protoboard. Na outra perna do LED, o lado positivo, normalmente com a perna maior, nós vamos ligá-lo à porta 4 do arduino. Para o LDR vamos conectar o resistor de 10kΩ em uma perna e na outra vamos conectar na fileira de alimentação positiva da protoboard. Na mesma fileira vertical em que conectamos o resistor de 10kΩ devemos colocar um jumper ligando o LDR para a porta analógica A2 e da outra perna do resistor vamos ligar para a fileira de alimentação negativa.
 
