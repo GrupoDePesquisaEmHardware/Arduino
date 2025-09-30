@@ -3,15 +3,13 @@
 
    Você já ouviu falar sobre o sensor LDR? O sensor “Resistor Dependente de Luz” ("Light Dependent Resistor"), mais conhecido por sua sigla LDR, é um sensor que mede a intensidade da luz. Nós podemos encontrar esse tipo de sensor em poste de energia, por exemplo, que acende quando percebe a ausência de luz solar.
 
-**Imagem 1: LDR**
 
 <div align="center">
-<img width="533" height="317" alt="Image" src="https://github.com/user-attachments/assets/5259701d-e2c3-4019-9c9c-0db485473154" />
+<h3>Imagem 1: LDR</h3>	
+<img width="250" height="150" alt="Image" src="https://github.com/user-attachments/assets/5259701d-e2c3-4019-9c9c-0db485473154" />
+<p>Fonte: https://www.eletrogate.com/sensor-fotoresistor-ldr-de-5mm?utm_source=Site&utm_medium=GoogleMerchant&utm_campaign=GoogleMerchant<p>
 </div>
-
-*Fonte: https://www.eletrogate.com/sensor-fotoresistor-ldr-de-5mm?utm_source=Site&utm_medium=GoogleMerchant&utm_campaign=GoogleMerchant*
-
-                 
+         
 O sensor LDR é feito de um material semicondutor,ou seja, material que possui características de condução elétrica intermediárias entre materiais condutores (como metais) e isolantes, normalmente, sulfeto de cádmio (CdS), que tem a  propriedade de variar sua resistência de acordo com a intensidade de luz que incide sobre ele. Assim, quanto mais luz incide sobre o LDR menor sua resistência e maior a quantidade de corrente é permitido passar para o circuito. Desse modo, como um resistor comum, o mesmo não possui polaridade (lado positivo ou negativo definidos) e sua resistência é medida em ohms(Ω).
 
 **Imagem 2: Fluxo de corrente**
