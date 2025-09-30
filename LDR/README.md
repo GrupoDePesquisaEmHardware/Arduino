@@ -117,7 +117,7 @@ Finalmente, por meio do nosso comando analogWrite() o qual envia o comando da ta
 
 ## Colaboradores
 
-- [Síria Cabral](https://github.com/siriacfreitas))
+- [Síria Cabral](https://github.com/siriacfreitas)
 - [Lisandry Azuaje](https://github.com/lisandry)
 
 
