@@ -23,9 +23,9 @@ O sensor LDR é feito de um material semicondutor,ou seja, material que possui c
 Para entender melhor essa parte, primeiro temos que entender alguns conceitos químicos:   
 
 <div align="center">
-<h3>Imagem 2: Fluxo de corrente</h3>	
-<img width="358" height="254" alt="Image" src="https://github.com/user-attachments/assets/c347552d-269a-4e14-a7e8-1324dc868155" />
-<p>Fonte: https://www.kitsarduino.com.br/cmp/ldr.html*<p>
+<h3>Imagem 3: Estrutura do Átomo</h3>	
+<img width="300" height="200" alt="Image" src="https://github.com/user-attachments/assets/fdc1d5de-3391-4019-92f5-d7d407f7a28b" />
+<p>Fonte: https://brasilescola.uol.com.br/quimica/atomistica.htm<p>
 </div>
 
 									
