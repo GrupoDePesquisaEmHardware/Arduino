@@ -115,6 +115,10 @@ void loop()
 
 Finalmente, por meio do nosso comando analogWrite() o qual envia o comando da tarefa a ser realizada, vamos conseguir mudar a intensidade do nosso LED de acordo com a intensidade de luz que o nosso LDR esteja recebendo.
 
+## Colaboradores
+
+- [Síria Cabral](https://github.com/siriacfreitas))
+- [Lisandry Azuaje](https://github.com/lisandry)
 
 
 
