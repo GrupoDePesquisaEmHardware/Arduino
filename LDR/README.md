@@ -12,15 +12,22 @@
          
 O sensor LDR é feito de um material semicondutor,ou seja, material que possui características de condução elétrica intermediárias entre materiais condutores (como metais) e isolantes, normalmente, sulfeto de cádmio (CdS), que tem a  propriedade de variar sua resistência de acordo com a intensidade de luz que incide sobre ele. Assim, quanto mais luz incide sobre o LDR menor sua resistência e maior a quantidade de corrente é permitido passar para o circuito. Desse modo, como um resistor comum, o mesmo não possui polaridade (lado positivo ou negativo definidos) e sua resistência é medida em ohms(Ω).
 
-**Imagem 2: Fluxo de corrente**
-![Fluxo de corrente](https://www.kitsarduino.com.br/cmp/ldr.html)
-*Fonte: https://www.kitsarduino.com.br/cmp/ldr.html*
-
-
+<div align="center">
+<h3>Imagem 2: Fluxo de corrente</h3>	
+<img width="500" height="200" alt="Image" src="https://github.com/user-attachments/assets/6d673018-d3f9-4d68-94a9-22052a91a257" />
+<p>Fonte: https://www.kitsarduino.com.br/cmp/ldr.html*<p>
+</div>
 
 ## Entendendo o LDR a nível atômico:  
 
-Para entender melhor essa parte, primeiro temos que entender alguns conceitos químicos:                                                                            
+Para entender melhor essa parte, primeiro temos que entender alguns conceitos químicos:   
+
+<div align="center">
+<h3>Imagem 2: Fluxo de corrente</h3>	
+<img width="358" height="254" alt="Image" src="https://github.com/user-attachments/assets/c347552d-269a-4e14-a7e8-1324dc868155" />
+<p>Fonte: https://www.kitsarduino.com.br/cmp/ldr.html*<p>
+</div>
+
 									
 - **Elétron:** é a partícula subatômica de carga negativa que se encontra na parte externa do átomo (eletrosfera).
 - **Camada de valência:** é a camada mais afastada do núcleo e que apresenta um nível de energia mais baixo.
