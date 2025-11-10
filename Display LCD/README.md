@@ -85,5 +85,5 @@ void loop() {
 <p>Fonte: Autoria própria<p>
 </div>
 
-## Contribuidores
+## Contribuidor
 - [Vinicius Oliveira](https://github.com/VOCruz)
