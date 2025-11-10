@@ -4,7 +4,7 @@ Em projetos com microcontroladores, os mais utilizados são os displays LCD 16X2
 
 <div align="center">
 <h3>Figura 01: Display LCD 16X2</h3>
-<img width="500" height="250" alt="Image" src="https://github.com/user-attachments/assets/94ef8384-2df5-47eb-bb5e-c22c73c6e269" />
+<img width="600" height="300" alt="Image" src="https://github.com/user-attachments/assets/a970b6c3-9aa2-40b0-9a43-93c107a78a6a" />
 <p>Fonte: Autoria própria<p>
 </div>
 
