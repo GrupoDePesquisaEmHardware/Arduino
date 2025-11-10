@@ -1,11 +1,12 @@
-# Display LCD
+# Display LCD 16x2
 Você já ouviu falar sobre display LCD? Os displays LCD (Liquid Crystal Display) podem ser utilizados em diversos dispositivos como celulares, monitores, televisores, calculadoras e relógios digitais, entre outros. 
+
 Em projetos com microcontroladores, os mais utilizados são os displays LCD 16X2. Eles são muito úteis quando se precisa de uma resposta visual do que está sendo desenvolvido já que podem exibir caracteres, letras e números de forma nítida e clara. Esses displays contam com 16 colunas e 2 linhas, podendo ter sua luz de fundo (backlight) azul ou verde e as letras brancas ou pretas.
 
 <div align="center">
 <h3>Figura 01: Display LCD 16X2</h3>
 <img width="600" height="300" alt="Image" src="https://github.com/user-attachments/assets/a970b6c3-9aa2-40b0-9a43-93c107a78a6a" />
-<p>Fonte: Autoria própria<p>
+<p>Fonte: https://www.usinainfo.com.br/display-arduino/display-lcd-16x2-com-fundo-azul-2304.html<p>
 </div>
 
 ## Materiais Necessários
@@ -26,8 +27,11 @@ Em projetos com microcontroladores, os mais utilizados são os displays LCD 16X2
 </div>
 
 Para conectar o display ao Arduino, começamos pela alimentação. Utilizamos jumpers para conectar os pinos VSS e VDD do display às portas GND e VCC do Arduino, respectivamente. 
+
 Este display possui quatro pinos de controle. O terceiro pino, V0, é responsável por controlar o contraste entre a luz de fundo e as letras, então ele é ligado ao terminal central do potenciômetro permitindo ajustar o contraste para melhor visualização, os outros terminais do potenciômetro serão ligados um no VCC e outro no GND. O pino RS define se a informação passada será o texto a ser exibido ou comandos para controlar o comportamento do display, ele é conectado à porta digital 2 do Arduino. O pino RW controla de será feita uma escrita ou leitura de informação do display, como será realizado apenas escrita ele pode ser ligado ao GND. Já o pino E (*enable*) define quando a informação será enviada para o display, ele é ligado à porta digital 3.
+
 Os pinos D0 a D7 são pinos de dados, para aplicações mais simples como essa, não são necessário usar todos os 8, apenas os 4 últimos, então os pinos D4, D5, D6 e D7 são ligados, respectivamente, às portas digitais 4, 5, 6 e 7.
+
 Os dois últimos pinos controlam a luz de fundo, ou seja, ligam os LEDs responsáveis por iluminar o display. Como qualquer LED, o pino A (ânodo) deve ser ligado ao VCC passando um resistor, enquanto o pino K (catodo) é ligado ao GND.
 
 ## Código
@@ -59,6 +63,7 @@ void setup() {
 ```
 
 A função loop() será executada após a setup() e irá repetir o código dentro dela até o Arduino ser desligado ou reiniciado. Nela criamos um laço for para incrementar a variável “i” de 0 a 13, dentro desse laço é definido por “i” onde o cursor irá começar a escrever a mensagem e exibi-la através do método print(), após 200 milissegundos o display é limpo e exibirá a mensagem na nova posição fazendo um deslocamento para a direita. 
+
 Depois que o primeiro for encerrar, começará o segundo que decrementa a variável “i”, fazendo deslocar para a esquerda, e escreve na segunda linha do display. Resumidamente, a mensagem ficará “circulando” pela tela como exemplificado na figura 03.
 
 ```cpp
