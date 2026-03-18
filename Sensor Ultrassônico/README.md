@@ -1,69 +1,58 @@
 # Sensor Ultrassônico
 
-## Introdução
+Os sensores ultrassônicos são componentes fundamentais em sistemas de detecção de objetos e medição de distância, sendo amplamente utilizados em aplicações como robótica, automação e sistemas de segurança. 
 
-Neste repositório, será apresentado um dos componentes mais importante para a detecção de objetos na pista, que é o sensor ultrassônico. O sensor ultrassônico é um dispositivo que utiliza ondas sonoras de alta frequência para medir a distância entre o sensor e um objeto. Esses sensores são amplamente utilizados em aplicações de robótica, automação, e sistemas de segurança para detectar objetos e medir distâncias com precisão.
+Esses sensores operam por meio da emissão de ondas sonoras em alta frequência (acima de 20 kHz), permitindo calcular distâncias com boa precisão a partir do tempo de retorno do sinal refletido. Neste projeto, será apresentado o funcionamento do sensor ultrassônico, bem como sua aplicação prática com microcontroladores.
 
-
-<div align = "center">
-  <img src="https://github.com/Valdemar-Neto/Valdemar-Neto/assets/108936921/1c9cdde5-b8c6-43ef-a60a-858578ba3139" width = 250px height= 250px>  
+<div align="center">
+<h3>Figura 01: Sensor Ultrassônico</h3>
+<img src="https://github.com/Valdemar-Neto/Valdemar-Neto/assets/108936921/1c9cdde5-b8c6-43ef-a60a-858578ba3139" width="250" height="250"/>
+<p>Fonte: Autoria própria</p>
 </div>
-
-## Funcionamento
-
-O sensor ultrassônico opera emitindo um pulso de som em uma frequência ultrassônica (geralmente acima de 20 kHz). Esse pulso viaja pelo ar e, quando encontra um objeto, é refletido de volta ao sensor. O sensor então calcula a distância com base no tempo que o pulso levou para retornar. Você pode acessar o DataSheet desse sensor [nesse link](https://octopart.com/datasheet/hc-sr04-osepp-64751802?msclkid=f3a9b27dfed313fb6b86d40d472b6797&utm_source=bing&utm_medium=cpc&utm_campaign=b_cpc_latam-br_search_dsa_english_en_usd_all-categories&utm_term=semiconductors&utm_content=Discrete%20Semiconductors%20DSA)
-
-### Diagrama de Funcionamento
-
-1. **Emissão do Pulso**: O transdutor de emissão do sensor gera um pulso ultrassônico.
-2. **Reflexão**: O pulso viaja até encontrar um objeto e é refletido de volta.
-3. **Recepção do Pulso**: O transdutor de recepção do sensor detecta o pulso refletido.
-4. **Cálculo da Distância**: O tempo decorrido entre a emissão e a recepção do pulso é usado para calcular a distância ao objeto.
-
-## Aplicações
-
-Os sensores ultrassônicos são utilizados em diversas aplicações, tais como:
-
-- **Robótica**: Para navegação e prevenção de colisões.
-- **Automação Industrial**: Para medição de nível de líquidos e detecção de objetos.
-- **Automóveis**: Em sistemas de estacionamento assistido.
-- **Segurança**: Para detectar a presença de intrusos.
-- **Domótica**: Em sistemas de alarme e automação residencial.
-
-## Requisitos para Funcionamento
-
-Para operar corretamente, o sensor ultrassônico tem os seguintes requisitos:
-
-### Alimentação
-
-- **Tensão de Operação**: Normalmente 5V (alguns modelos podem operar com 3.3V)
-- **Corrente de Operação**: Variável conforme o modelo, geralmente entre 10mA e 50mA
-
-### Condições Ambientais
-
-- **Temperatura de Operação**: -15°C a +70°C
-- **Umidade Relativa**: 5% a 95% sem condensação
 
 ### Conexões
 
-- **Vcc**: Conectado à tensão de alimentação.
-- **GND**: Conectado ao terra.
-- **Trigger (Trig)**: Pin de entrada que inicia a medição.
-- **Echo (ECHO)**: Pin de saída que emite um pulso de duração proporcional à distância medida.
+- **VCC** → Alimentação (5V)  
+- **GND** → Terra  
+- **TRIG** → Pino digital de saída  
+- **ECHO** → Pino digital de entrada 
+
+## Materiais Necessários
+- Sensor ultrassônico (HC-SR04)
+- Placa Arduino (Uno ou similar)
+- Jumpers macho-macho
+- Protoboard
+- Cabo USB para alimentação
+
+## Funcionamento do circuito
+
+<div align="center">
+<h3>Figura 02: Diagrama de Funcionamento</h3>
+<img src="https://github.com/user-attachments/assets/dd75245f-0450-4245-8827-c0603ef1cffc" />
+<p>Fonte: Adaptado de <a href="https://cursos.mcielectronics.cl/2022/12/06/como-funciona-el-sensor-ultrasonico-hc-sr04-y-como-se-conecta-con-arduino/">MCI Education</a></p>
+</div>
+
+O sensor ultrassônico funciona a partir da emissão e recepção de ondas sonoras. O processo ocorre em quatro etapas principais:
+
+1. **Emissão do Pulso**: O pino TRIG envia um pulso ultrassônico.  
+2. **Propagação e Reflexão**: O pulso percorre o ar até encontrar um obstáculo e retorna ao sensor.  
+3. **Recepção do Pulso**: O pino ECHO recebe o sinal refletido.  
+4. **Cálculo da Distância**: O tempo entre envio e recepção é utilizado para determinar a distância.  
 
 ## Cálculo da Distância
 
-O cálculo da distância com um sensor ultrassônico é feito com base no tempo que o pulso sonoro leva para viajar até o objeto e retornar. A fórmula básica para o cálculo da distância é:
-
-$$\[ \text{Distância} = \frac{\text{Tempo} \times \text{Velocidade do Som}}{2} \]$$
+A distância é calculada com base no tempo de ida e volta da onda sonora:
+<center> d = (t × v) / 2 </center>
 
 Onde:
-- **Tempo** é o intervalo entre a emissão e recepção do pulso, medido em segundos.
-- **Velocidade do Som** é aproximadamente 343 m/s a 20°C.
+- **d** é a distância  
+- **t** é o tempo medido  
+- **v** é a velocidade do som (aproximadamente 343 m/s)  
 
+## Código
 
+Para demonstrar o funcionamento do sensor, o código abaixo realiza a leitura da distância e imprime o valor no monitor serial:
 
-### Exemplo de código 
 ```cpp
 #define TRIG 11
 #define ECHO 10
@@ -74,82 +63,102 @@ float distance;
 int ler() {
   unsigned long timeInicio, timeDuracao;
 
-  // Emissão do pulso ultrassônico
   digitalWrite(TRIG, HIGH);
   delayMicroseconds(10);
   digitalWrite(TRIG, LOW);
 
-  // Aguarda até o início da recepção do pulso
   while (digitalRead(ECHO) == LOW) {}
 
-  // Marca o tempo de início da recepção do pulso
   timeInicio = micros();
 
-  // Aguarda até o final da recepção do pulso
   while (digitalRead(ECHO) == HIGH) {}
 
-  // Calcula a duração do pulso
   timeDuracao = micros() - timeInicio;
   Serial.println(timeDuracao);
 
-  // Calcula e retorna a distância em centímetros
   return (timeDuracao / 55);
 }
 
 void setup() {
   Serial.begin(9600);
 
-  // Configura os pinos TRIG e ECHO
   pinMode(TRIG, OUTPUT);
   pinMode(ECHO, INPUT);
 
-  // Garante que o pino TRIG esteja baixo inicialmente
   digitalWrite(TRIG, LOW);
 }
 
 void loop() {
-  // Chama a função ler para obter a distância
   distance = ler();
 
-  // Imprime a distância no serial monitor
   Serial.print("Distancia: ");
   Serial.println(distance);
 
-  // Aguarda 100 milissegundos antes de realizar nova leitura
   delay(100);
 }
 ```
-### Descrição da Função ler
-A função ler é responsável por emitir um pulso ultrassônico, medir o tempo que leva para o pulso retornar e calcular a distância ao objeto. Ela realiza as seguintes etapas:
 
-1.  Emissão do Pulso Ultrassônico:
-    - Define o pino TRIG como HIGH por 10 microsegundos e depois o define como LOW. Isso gera um pulso ultrassônico.
-2. Medição do Tempo de Retorno:
+## Funcionamento do Código
 
-   - Aguarda até que o pino ECHO fique HIGH, indicando que o pulso foi enviado e está aguardando o retorno.
-   - Marca o tempo de início usando ```micros()```.
-   - Aguarda até que o pino ECHO volte a LOW, indicando que o pulso retornou.
-   - Calcula a duração do pulso como a diferença entre o tempo atual e o tempo de início.
+A função ler() executa três etapas principais:
 
-3. Cálculo da Distância:
+1. Emissão do Pulso Ultrassônico
+   - O pino TRIG é ativado por 10 microsegundos.
 
-   - Converte a duração do pulso em distância, dividindo por 55 para obter a distância em centímetros. O divisor 55 é uma simplificação baseada na velocidade do som e na conversão de microsegundos para centímetros.
+2. Medição do Tempo
+   - Aguarda o sinal de retorno no pino ECHO.
+   - Mede o tempo utilizando a função micros().
 
-### Funções Presentes no Código
+3. Cálculo da Distância
+   - O tempo é convertido em distância utilizando um fator de escala (divisão por 55).
 
-- ```pinMode(pin, mode)```: Configura o pino especificado como entrada (INPUT) ou saída (OUTPUT).
-- ```digitalWrite(pin, value)```: Define o nível lógico do pino especificado como HIGH (alto) ou LOW (baixo).
-- ```delayMicroseconds(us)```: Pausa a execução do programa pelo número especificado de microsegundos.
-- ```digitalRead(pin)```: Lê o valor lógico (HIGH ou LOW) do pino especificado.
-- ```micros()```: Retorna o número de microsegundos desde que o programa começou a ser executado.
-- ```Serial.begin(baudrate)```: Inicializa a comunicação serial com a taxa de transmissão especificada (baudrate).
-  -  `Baudrate`: é a taxa de tranmissão de dados em bits por segundos (bps). Os valores mais comuns de baudrate são: 9660, 14400, 19200, 38400, 57600 ente outros.
-- ```Serial.print(value)```: Imprime um valor na porta serial.
-- ```Serial.println(value)```: Imprime um valor na porta serial, seguido de uma nova linha.
-- ```delay(ms)```: Pausa a execução do programa pelo número especificado de milissegundos.
+## Principais Funções Utilizadas
 
-## Colaborador
-Valdemar Gonçalves Pereira Neto - Engenharia Mecatrônica
+- pinMode() → Define o modo do pino (entrada ou saída)
 
+- digitalWrite() → Envia sinal HIGH ou LOW
 
+- digitalRead() → Lê o estado do pino
 
+- delayMicroseconds() → Pausa em microssegundos
+
+- micros() → Retorna o tempo em microssegundos
+
+- Serial.begin() → Inicializa comunicação serial
+
+- Serial.print() → Imprime dados
+
+- Serial.println() → Imprime dados com quebra de linha
+
+- delay() → Pausa em milissegundos
+
+## Aplicações
+
+Os sensores ultrassônicos podem ser utilizados em diversas áreas:
+
+- Robótica: Navegação e prevenção de colisões
+
+- Automação Industrial: Medição de nível e detecção de objetos
+
+- Automóveis: Sensores de estacionamento
+
+- Segurança: Detecção de presença
+
+- Domótica: Automação residencial
+
+## Requisitos de Funcionamento
+Alimentação
+
+- Tensão: 5V
+
+- Corrente: 10mA a 50mA
+
+Condições Ambientais
+
+- Temperatura: -15°C a +70°C
+
+- Umidade: 5% a 95%
+
+# Contribuidor
+
+<p><a href="https://github.com/Valdemar-Neto/\">Valdemar Neto</a></p>
