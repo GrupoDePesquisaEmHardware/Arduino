@@ -58,16 +58,23 @@ Drivers como **L298N** e **L293D** já possuem ponte H integrada, facilitando o 
 
 ## Código
 
-O código abaixo demonstra o controle de direção e velocidade de motores DC utilizando sinais PWM:
+O código abaixo demonstra o controle de direção e velocidade de motores DC utilizando sinais PWM.
+
+O bloco abaixo demonstra a configuração dos pinos analógicos utilizados injeção de valores para o controle do motor, assim como  a valocidade e o tempo de duração de cada atividade, a fim de movimentar um robõ para frente, para trás, para o lado direito e para o lado esquerdo.
 
 ```cpp
 #define AIA  3 
 #define AIB  9 
 #define BIA 10 
-#define BIB  6  
+#define BIB  6
 
 int speed = 255;
 int temp = 100;
+
+```
+
+Na função `setup()`, executada apenas uma vez quando o Arduino é ligado ou reiniciado, atribuímos cada pino analógico escolhido como saída e, para questão de seguranaça, a função `stop` é utilizada para validar os motores.
+```cpp
 
 void setup() 
 {
@@ -81,6 +88,11 @@ void setup()
   stop();
 }
 
+```
+
+A função loop() será executada após a setup() e irá repetir o código dentro dela até o Arduino ser desligado ou reiniciado Porém, há uma particularidade nela que é a modularidade das funções que são usadas como `forward`, `backward`, `forward_dir`, `forward_esq` e `setop`. As funções são ativiadas sequencialmente de forma a simular o robô ir para frente, para trás, para direta, para esquerda e parar.
+
+```cpp
 void loop()
 {
     forward();
@@ -101,6 +113,11 @@ void loop()
     delay(temp);
 }
 
+```
+
+A função backward() é responsável por movimentar o robô para trás. Para isso, ela inverte a polaridade aplicada aos motores, fazendo com que ambos girem no sentido contrário ao da função forward. Isso é feito aplicando o sinal PWM nos pinos responsáveis pelo sentido reverso de cada motor.
+
+```cpp
 void backward()
 {
   analogWrite(AIA, 0);
@@ -109,6 +126,10 @@ void backward()
   analogWrite(BIB, speed);
 }
 
+```
+A função forward() realiza o movimento do robô para frente. Nela, o sinal PWM é aplicado nos pinos que definem o sentido direto dos motores, enquanto os pinos opostos recebem valor zero, garantindo o giro correto.
+
+```cpp
 void forward()
 {
   analogWrite(AIA, speed);
@@ -117,11 +138,21 @@ void forward()
   analogWrite(BIB, 0);
 }
 
+```
+A função backward_esq() é utilizada para movimentar o robô para trás com desvio à esquerda. Nesse caso, apenas um dos motores é acionado no sentido reverso, enquanto o outro permanece desligado, provocando a rotação do robô.
+
+```cpp
+
 void backward_esq()
 {
   analogWrite(AIA, 0);
   analogWrite(AIB, speed);
 }
+
+```
+A função backward_dir() tem como objetivo movimentar o robô para trás com desvio à direita. De forma semelhante à função anterior, apenas o motor correspondente ao lado direito é acionado no sentido reverso.
+
+```cpp
 
 void backward_dir()
 {
@@ -129,18 +160,32 @@ void backward_dir()
   analogWrite(BIB, speed);
 }
 
+```
+
+A função forward_esq() é responsável por movimentar o robô para frente com desvio à esquerda. Para isso, apenas o motor do lado esquerdo é acionado no sentido direto, enquanto o outro permanece desligado.
+
+```cpp
 void forward_esq()
 {
   analogWrite(AIA, speed);
   analogWrite(AIB, 0);
 }
 
+```
+A função forward_dir() realiza o movimento do robô para frente com desvio à direita. Nesse caso, apenas o motor do lado direito é acionado no sentido direto.
+
+```cpp
 void forward_dir()
 {
   analogWrite(BIA, speed);
   analogWrite(BIB, 0);
 }
 
+```
+
+Por fim, a função stop() é responsável por interromper completamente o movimento do robô. Ela define todos os pinos de controle dos motores com valor zero, garantindo que nenhum sinal seja enviado e que os motores parem de girar.
+
+```cpp
 void stop()
 {
   analogWrite(BIA, 0);
@@ -150,7 +195,6 @@ void stop()
 }
 
 ```
-
 
 ## Funcionamento do Código
 
