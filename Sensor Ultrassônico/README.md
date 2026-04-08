@@ -51,13 +51,23 @@ Onde:
 
 ## Código
 
-Para demonstrar o funcionamento do sensor, o código abaixo realiza a leitura da distância e imprime o valor no monitor serial:
+O bloco abaixo define os pinos utilizados para comunicação com o sensor ultrassônico, sendo o pino `TRIG` responsável por enviar o pulso de disparo e o pino `ECHO` responsável por receber o sinal refletido. Além disso, a variável distance é utilizada para armazenar o valor da distância calculada.
 
 ```cpp
 #define TRIG 11
 #define ECHO 10
 
 float distance;
+
+```
+
+A função `ler()` é responsável por realizar a leitura da distância utilizando o sensor ultrassônico. Inicialmente, é enviado um pulso de 10 microssegundos no pino `TRIG`, o que faz com que o sensor emita uma onda sonora. Em seguida, o código aguarda até que o pino `ECHO` receba o sinal refletido pelo objeto.
+
+O tempo de duração do pulso recebido é medido utilizando a função micros(), que retorna o tempo em microssegundos desde o início da execução do programa. Esse tempo é proporcional à distância percorrida pela onda sonora (ida e volta).
+
+Por fim, o valor da distância é calculado a partir da duração do pulso e retornado pela função.
+
+```cpp
 
 // Função para ler a duração do pulso ultrassônico e calcular a distância
 int ler() {
@@ -79,6 +89,13 @@ int ler() {
   return (timeDuracao / 55);
 }
 
+```
+Na função `setup()´` , executada apenas uma vez ao iniciar o Arduino, são configurados os modos de operação dos pinos do sensor ultrassônico. O pino `TRIG` é definido como saída, pois será utilizado para enviar o pulso, enquanto o pino `ECHO` é definido como entrada, pois receberá o sinal refletido.
+
+Além disso, a comunicação serial é iniciada para permitir a visualização dos dados no monitor serial, e o pino `TRIG` é inicialmente colocado em nível baixo para evitar disparos indesejados.
+
+
+```cpp
 void setup() {
   Serial.begin(9600);
 
@@ -87,6 +104,14 @@ void setup() {
 
   digitalWrite(TRIG, LOW);
 }
+
+```
+
+A função `loop()` é executada continuamente após a `setup()`. Nela, a função `ler()´` é chamada para obter a distância medida pelo sensor ultrassônico, e o valor retornado é armazenado na variável distance.
+
+Em seguida, a distância é exibida no monitor serial, permitindo o acompanhamento em tempo real das medições. Por fim, é aplicado um pequeno atraso de 100 milissegundos para evitar leituras excessivamente rápidas.
+
+```cpp
 
 void loop() {
   distance = ler();
