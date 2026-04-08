@@ -102,3 +102,7 @@ Bom pessoal, se vocês realizaram todos os passos corretamente, neste momento o 
 
 Link do circuito no tinkercad:
 https://www.tinkercad.com/things/ckqOqVj8PFR-desafio-2-gph?sharecode=uvGA8DQBbyjPcz5R2TsloALujyMTMqzlwSg-vFZ75BY
+
+# Contribuidor
+
+- <p><a href="https://github.com/RonaldLucas19">Ronald Lucas</a></p>
