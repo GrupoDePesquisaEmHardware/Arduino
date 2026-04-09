@@ -3,8 +3,8 @@
  Fala pessoal! Vocês já ouviram falar sobre o motor de passo? Esse motor é utilizado em vários tipos de circuitos elétricos e equipamentos, como nas impressoras 3D e braços robóticos. Bora entender um pouco mais sobre ele?
                                     
 <div align="center">
-<h3>Figura 1: Motor de Passo 28BYJ-48 e Driver ULN2003</h3>	
-<img width="1263" height="545" alt="Image" src="https://github.com/user-attachments/assets/a89f23be-dacd-4385-a058-538c1f86ab81" />
+<h3>Figura 1: Motor de Passo 28BYJ-48 e Driver ULN2003</h3>	 
+<img width="749" height="394" alt="image" src="https://github.com/user-attachments/assets/294bf4b4-7215-4dc2-a902-987f8562d64a" />
 <h4>Fonte: Autoria Própria </h4>
 </div>
 
@@ -29,7 +29,7 @@ No circuito que iremos montar trouxemos a ideia de utilizar dois botões para re
 
 <div align="center">
 <h3>Figura 2:  Circuito de ativação do motor a partir de dois botões.</h3>	
-<img width="1263" height="545" alt="Image" src="https://github.com/user-attachments/assets/a89f23be-dacd-4385-a058-538c1f86ab81" />
+<img width="686" height="347" alt="image" src="https://github.com/user-attachments/assets/210dede6-786c-42c0-8f57-c86264aca3bb" />
 <h4>Fonte: Circuito autoral </h4>
 </div>
 
@@ -92,3 +92,4 @@ https://www.tinkercad.com/things/biymleWXH5U-dazzling-esboo?sharecode=M-_91GnyS-
 # Contribuidor
 
 - <p><a href="https://github.com/RonaldLucas19">Ronald Lucas</a></p>
+- <p><a href="https://github.com/Valdemar-Neto">Valdemar Neto</a></p>
