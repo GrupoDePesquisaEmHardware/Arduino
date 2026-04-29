@@ -12,7 +12,7 @@ O Sistema de Posicionamento Global (GPS) é um sistema de navegação por satél
 
 <div align="center">
 <h3>Figura 1 - Satélites do GPS</h3>	 
-<img width="749" height="394" alt="image" src="https://files.tecnoblog.net/wp-content/uploads/2023/10/orbitas-satelites-gps-700x597.jpg" />
+<img width="397" height="338" alt="image" src="https://files.tecnoblog.net/wp-content/uploads/2023/10/orbitas-satelites-gps-700x597.jpg" />
 <h4>Fonte: www.gps.gov </h4>
 </div>
 
