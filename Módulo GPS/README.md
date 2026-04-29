@@ -34,14 +34,14 @@ Ele integra um receptor de GPS a pinos de alimentação e comunicação, podendo
 <h4>Fonte: Adaptado de AutoCore Robótica</h4>
 </div>
 
-### Conexões
+## Conexões
 
 - VCC → Alimentação (5V)
 - GND → Terra
 - TX → Transmissão serial de dados
 - RX → Recepção serial de dados
 
-### Materiais necessários
+## Materiais necessários
 
 - Arduino (Uno, Mega, etc.)
 - 4 fios macho-fêmea
