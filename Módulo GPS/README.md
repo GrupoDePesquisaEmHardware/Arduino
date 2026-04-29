@@ -29,9 +29,9 @@ O módulo GPS Neo-6M utiliza os sinais dos satélites para determinar a posiçã
 Ele integra um receptor de GPS a pinos de alimentação e comunicação, podendo se conectar com diferentes placas de prototipagem e microcontroladores.
 
 <div align="center">
-<h3>**Figura 2** - Módulo GPS GY-NEO6MV2</h3>	 
+<h3>Figura 2 - Módulo GPS GY-NEO6MV2</h3>	 
 <img width="397" height="397" alt="image" src="https://http2.mlstatic.com/D_NQ_NP_765319-MLA99988235169_112025-O.webp" />
-<h4>**Fonte:** Adaptado de AutoCore Robótica</h4>
+<h4>Fonte: Adaptado de AutoCore Robótica</h4>
 </div>
 
 ### Conexões
@@ -171,9 +171,9 @@ Lembrando também que a recepção de sinais pelo GPS pode ser dificultada se es
 Se tudo der certo, você deve obter algo parecido com a Figura 4 como saída no Monitor Serial. A data e hora exibidas são do relógio atômico recebidos diretamente dos satélites e estão no formato UTC, um horário-padrão internacional. No entanto, a TinyGPSPlus possui funções para convertê-las para o horário local, se você quiser ampliar o projeto.
 
 <div align="center">
-<h3>**Figura 4** - Impressão dos dados captados pelo GPS no monitor serial</h3>	 
-<img width="600" height="212" alt="image" src="https://drive.google.com/file/d/1KQFjJOSzcsHoxgPToDlEb3DWgaZ3IJ3N/view?usp=sharing" />
-<h4>**Fonte:** Autoria própria</h4>
+<h3>Figura 4 - Impressão dos dados captados pelo GPS no monitor serial</h3>	 
+<img width="604" height="209" alt="Captura de tela de 2026-04-29 17-07-35" src="https://github.com/user-attachments/assets/d47c2fe3-802f-4403-8937-74c32af06c5d" />
+<h4>Fonte: Autoria própria</h4>
 </div>
 
 Com isso, você já tem um sistema básico de geolocalização funcionando. A partir daqui, é possível expandir o projeto para aplicações como rastreamento, navegação ou IoT.
