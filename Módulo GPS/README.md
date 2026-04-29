@@ -1,30 +1,23 @@
 # Módulo GPS
 
-**Grupo de Pesquisa em Hardware**  
-Giovana M. C. Dantas e Otávio A. C. Barbosa
-
 Você já ouviu falar sobre o GPS? Se você já compartilhou sua localização com um familiar, acompanhou uma corrida por aplicativo, rastreou a entrega de uma encomenda em tempo real ou fez um post nas redes sociais com a sua localização atual, você estava fazendo uso dessa tecnologia e, talvez, nem imaginasse!
 
 Mas afinal, o que é o GPS? É uma sigla para *Global Positioning System* (ou Sistema de Posicionamento Global, em português) e, apesar de estar presente em várias funcionalidades do nosso cotidiano poucas pessoas conhecem o funcionamento por trás desse sistema de geolocalização.
 
 Nesse projeto, vamos conhecer um pouco de como essa tecnologia ajudou a impulsionar a vida em sociedade e entender como podemos usar o GPS, por meio do Módulo GPS Neo-6M, para trabalhar com localização em nossos projetos eletrônicos. Para isso, utilizaremos uma placa Arduino como base para a aplicação prática.
 
----
-
 ## O que é o GPS?
 
 O Sistema de Posicionamento Global (GPS) é um sistema de navegação por satélite capaz de definir a localização geográfica de um objeto com precisão de, aproximadamente, 5 metros.
 
 > **Figura 1** - Satélites do GPS  
-> **Fonte:** [www.gps.gov](https://www.gps.gov/technical/ps/)
+> **Fonte:** [www.gps.gov](https://files.tecnoblog.net/wp-content/uploads/2023/10/orbitas-satelites-gps-700x597.jpg/)
 
 Do ponto de vista físico, o GPS consiste em um conjunto de 24 satélites que orbitam a Terra a uma distância aproximada de 20.000 quilômetros, como ilustra a figura acima. Cada satélite circunda o planeta duas vezes por dia e transmite um sinal que pode ser captado por dispositivos receptores, como o nosso módulo GPS, e usado para determinar a sua localização. Mas de que forma esse cálculo é feito?
 
 O cálculo das coordenadas do receptor, a partir dos sinais recebidos pelos satélites, se dá por um processo chamado de triangulação. De forma resumida, se o dispositivo conseguir receber dados de pelo menos 4 satélites diferentes, ele pode encontrar a sua distância até cada um deles e relacioná-las para, depois de alguns cálculos trigonométricos, obter sua latitude e longitude.
 
 No entanto, você não precisa ser um especialista no funcionamento do GPS para poder aproveitar os benefícios dessa tecnologia. Com esses conhecimentos iniciais, já estamos prontos para aplicar o GPS em um projeto prático com Arduino.
-
----
 
 ## Módulo GPS Neo-6M
 
@@ -33,7 +26,7 @@ O módulo GPS Neo-6M utiliza os sinais dos satélites para determinar a posiçã
 Ele integra um receptor de GPS a pinos de alimentação e comunicação, podendo se conectar com diferentes placas de prototipagem e microcontroladores.
 
 > **Figura 2** - Módulo GPS GY-NEO6MV2  
-> **Fonte:** Adaptado de [AutoCore Robótica](https://autocorerobotica.blog.br/aprenda-utilizar-o-modulo-gps-com-arduino/)
+> **Fonte:** Adaptado de [AutoCore Robótica](https://http2.mlstatic.com/D_NQ_NP_765319-MLA99988235169_112025-O.webp)
 
 ### Conexões
 
@@ -48,8 +41,6 @@ Ele integra um receptor de GPS a pinos de alimentação e comunicação, podendo
 - 4 fios macho-fêmea
 - 1 Módulo GPS NEO-6M com Antena
 
----
-
 ## Funcionamento do circuito
 
 Agora vamos montar o circuito necessário para utilizar o módulo GPS com o Arduino. Primeiro, conecte com um fio o pino GND do Arduino ao GND do módulo. Conecte também o pino 5V da placa ao pino VCC do Neo-6M.
@@ -57,9 +48,7 @@ Agora vamos montar o circuito necessário para utilizar o módulo GPS com o Ardu
 Além disso, precisamos apenas fazer as conexões para estabelecer a comunicação Serial entre a nossa placa e o GPS. Para isso, basta conectar o RX do módulo ao pino 2 do Arduino e o TX ao pino 3 (A montagem completa está ilustrada na Figura 3, para você se basear). Feito isso, a nossa montagem estará pronta: você já tem um circuito de GPS funcional!
 
 > **Figura 3** - Circuito eletrônico para ligação do Módulo GPS Neo-6M  
-> **Fonte:** Adaptado de [S.T.A. Sistemas e Tecnologia Aplicada](https://www.sta-eletronica.com.br/artigos/arduinos/como-utilizar-o-modulo-gps-neo-6m-com-o-arduino)
-
----
+> **Fonte:** Adaptado de [S.T.A. Sistemas e Tecnologia Aplicada](https://www.sta-eletronica.com.br/resources/artigos/comoutilizaromodulogpsneo-6mcomoarduino-5.jpg)
 
 ## Código do circuito
 
@@ -173,6 +162,6 @@ Lembrando também que a recepção de sinais pelo GPS pode ser dificultada se es
 Se tudo der certo, você deve obter algo parecido com a Figura 4 como saída no Monitor Serial. A data e hora exibidas são do relógio atômico recebidos diretamente dos satélites e estão no formato UTC, um horário-padrão internacional. No entanto, a TinyGPSPlus possui funções para convertê-las para o horário local, se você quiser ampliar o projeto.
 
 > **Figura 4** - Impressão dos dados captados pelo GPS no monitor serial  
-> **Fonte:** Autoria própria
+> **Fonte:** Autoria própria (https://drive.google.com/file/d/1KQFjJOSzcsHoxgPToDlEb3DWgaZ3IJ3N/view?usp=sharing)
 
 Com isso, você já tem um sistema básico de geolocalização funcionando. A partir daqui, é possível expandir o projeto para aplicações como rastreamento, navegação ou IoT.
