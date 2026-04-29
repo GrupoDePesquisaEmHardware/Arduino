@@ -10,8 +10,11 @@ Nesse projeto, vamos conhecer um pouco de como essa tecnologia ajudou a impulsio
 
 O Sistema de Posicionamento Global (GPS) é um sistema de navegação por satélite capaz de definir a localização geográfica de um objeto com precisão de, aproximadamente, 5 metros.
 
-> **Figura 1** - Satélites do GPS  
-> **Fonte:** [www.gps.gov](https://files.tecnoblog.net/wp-content/uploads/2023/10/orbitas-satelites-gps-700x597.jpg/)
+<div align="center">
+<h3>Figura 1 - Satélites do GPS</h3>	 
+<img width="749" height="394" alt="image" src="https://files.tecnoblog.net/wp-content/uploads/2023/10/orbitas-satelites-gps-700x597.jpg/" />
+<h4>Fonte: www.gps.gov </h4>
+</div>
 
 Do ponto de vista físico, o GPS consiste em um conjunto de 24 satélites que orbitam a Terra a uma distância aproximada de 20.000 quilômetros, como ilustra a figura acima. Cada satélite circunda o planeta duas vezes por dia e transmite um sinal que pode ser captado por dispositivos receptores, como o nosso módulo GPS, e usado para determinar a sua localização. Mas de que forma esse cálculo é feito?
 
