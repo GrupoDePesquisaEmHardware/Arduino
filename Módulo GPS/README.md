@@ -28,8 +28,11 @@ O módulo GPS Neo-6M utiliza os sinais dos satélites para determinar a posiçã
 
 Ele integra um receptor de GPS a pinos de alimentação e comunicação, podendo se conectar com diferentes placas de prototipagem e microcontroladores.
 
-> **Figura 2** - Módulo GPS GY-NEO6MV2  
-> **Fonte:** Adaptado de [AutoCore Robótica](https://http2.mlstatic.com/D_NQ_NP_765319-MLA99988235169_112025-O.webp)
+<div align="center">
+<h3>**Figura 2** - Módulo GPS GY-NEO6MV2</h3>	 
+<img width="397" height="397" alt="image" src="https://http2.mlstatic.com/D_NQ_NP_765319-MLA99988235169_112025-O.webp" />
+<h4>**Fonte:** Adaptado de AutoCore Robótica</h4>
+</div>
 
 ### Conexões
 
@@ -50,8 +53,11 @@ Agora vamos montar o circuito necessário para utilizar o módulo GPS com o Ardu
 
 Além disso, precisamos apenas fazer as conexões para estabelecer a comunicação Serial entre a nossa placa e o GPS. Para isso, basta conectar o RX do módulo ao pino 2 do Arduino e o TX ao pino 3 (A montagem completa está ilustrada na Figura 3, para você se basear). Feito isso, a nossa montagem estará pronta: você já tem um circuito de GPS funcional!
 
-> **Figura 3** - Circuito eletrônico para ligação do Módulo GPS Neo-6M  
-> **Fonte:** Adaptado de [S.T.A. Sistemas e Tecnologia Aplicada](https://www.sta-eletronica.com.br/resources/artigos/comoutilizaromodulogpsneo-6mcomoarduino-5.jpg)
+<div align="center">
+<h3>Figura 3 - Circuito eletrônico para ligação do Módulo GPS Neo-6M</h3>	 
+<img width="600" height="373" alt="image" src="https://www.sta-eletronica.com.br/resources/artigos/comoutilizaromodulogpsneo-6mcomoarduino-5.jpg" />
+<h4>Fonte: Adaptado de S.T.A. Sistemas e Tecnologia Aplicada</h4>
+</div>
 
 ## Código do circuito
 
@@ -164,7 +170,10 @@ Lembrando também que a recepção de sinais pelo GPS pode ser dificultada se es
 
 Se tudo der certo, você deve obter algo parecido com a Figura 4 como saída no Monitor Serial. A data e hora exibidas são do relógio atômico recebidos diretamente dos satélites e estão no formato UTC, um horário-padrão internacional. No entanto, a TinyGPSPlus possui funções para convertê-las para o horário local, se você quiser ampliar o projeto.
 
-> **Figura 4** - Impressão dos dados captados pelo GPS no monitor serial  
-> **Fonte:** Autoria própria (https://drive.google.com/file/d/1KQFjJOSzcsHoxgPToDlEb3DWgaZ3IJ3N/view?usp=sharing)
+<div align="center">
+<h3>**Figura 4** - Impressão dos dados captados pelo GPS no monitor serial</h3>	 
+<img width="600" height="212" alt="image" src="https://drive.google.com/file/d/1KQFjJOSzcsHoxgPToDlEb3DWgaZ3IJ3N/view?usp=sharing" />
+<h4>**Fonte:** Autoria própria</h4>
+</div>
 
 Com isso, você já tem um sistema básico de geolocalização funcionando. A partir daqui, é possível expandir o projeto para aplicações como rastreamento, navegação ou IoT.
