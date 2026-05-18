@@ -18,7 +18,7 @@ Possui um controle deslizante que passa por uma trilha resistiva, que varia a re
 
 <div align="center">
 <h3>Figura 1 - Potenciômetro deslizante</h3>
-<img width="400" height="300" alt="Image" src="https://www.usinainfo.com.br/modulo-potenciometro/modulo-potenciometro-deslizante-10k-para-arduino-4605.html?srsltid=AfmBOopacRzF9cZ2ajUBwbF473rr4EeUsLreRkfVaLQcmDk3NHVntHw1" />
+<img width="400" height="300" alt="Image" src="https://www.usinainfo.com.br/1024442-thickbox_default/modulo-potenciometro-deslizante-10k-para-arduino.jpg" />
 <h4>Fonte: https://www.usinainfo.com.br/modulo-potenciometro/modulo-potenciometro-deslizante-10k-para-arduino-4605.html</h4>
 </div>
 
