@@ -11,3 +11,10 @@ No mercado, pode-se encontrar dois principais tipos de buzzer: o ativo e o passi
 Tendo isso em vista, o buzzer passivo depende especialmente da frequência enviada pelo arduino para que seja funcional, precisando, assim, montar um circuito oscilante. Essa dependência também implica em uma maior versatilidade, visto que a função “tone” - que será explicada mais à frente - será a responsável por moldar as frequências desejadas. Logo, esse buzzer passivo é mais utilizado para criar melodias ou músicas específicas e esta aplicação do componente será utilizada no desafio.
 Já o buzzer ativo tem um diferencial importante em sua estrutura: ele possui um circuito próprio, de modo que sua oscilação não depende da corrente elétrica, o que facilita a sua ativação, de modo a se assemelhar com a declaração de um LED. Entretanto, esse oscilador interno impede modificações no som, ou seja, a função “tone” não é capaz de mudar a frequência, pelo contrário, utilizar este comando no código causará falhas em como o buzzer soará. Assim, o tipo ativo serve para projetos que não demandam mudança de frequência e sua aplicação pode ser ligada a alarmes mais simples, como o som de um microondas ou de uma air fryer, em que não há mudança de tom. 
 
+<div align="center">
+<h3>Figura 1: Buzzer ativo x Buzzer passivo
+</h3>	 
+<img width="749" height="394" alt="image" src="<img width="461" height="166" alt="image" src="https://github.com/user-attachments/assets/f6814478-1cf0-4155-a42a-3699435e2638" />
+" />
+<h4>Fonte: Kit makers </h4>
+</div>
