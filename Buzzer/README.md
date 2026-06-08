@@ -14,7 +14,6 @@ Já o buzzer ativo tem um diferencial importante em sua estrutura: ele possui um
 <div align="center">
 <h3>Figura 1: Buzzer ativo x Buzzer passivo
 </h3>	 
-<img width="749" height="394" alt="image" src="<img width="461" height="166" alt="image" src="https://github.com/user-attachments/assets/f6814478-1cf0-4155-a42a-3699435e2638" />
-" />
+<img width="749" height="394" alt="image" src="<img width="461" height="166" alt="image" src="https://github.com/user-attachments/assets/f6814478-1cf0-4155-a42a-3699435e2638"/>
 <h4>Fonte: Kit makers </h4>
 </div>
