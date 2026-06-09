@@ -45,6 +45,7 @@ Com todas as informações citadas, já é possível fazer melodias utilizando p
 # Código
 Primeiramente, é necessário definir essas partes importantes  do código, para que seja possível a criação de qualquer melodia.
 Quanto à frequência das notas musicais:
+	```cpp
 // Oitava 4 (Oitava Central)
 #define NOTA_C4 262
 #define NOTA_CS4 277
@@ -77,13 +78,16 @@ Quanto aos tempos das notas:
 #define t1 500 //semínima
 #define t05 250 //colcheia
 #define t025 125//semicocheia
-Após essas configurações iniciais, declare as variáveis buzzer, ritmo, nota e duração. 
+ ```
+Após essas configurações iniciais, declare as variáveis buzzer, ritmo, nota e duração.
+	```cpp
 int buzzer = 3;
 int ritmo = 1.5;//serve para acelerar ou desacelerar a música
 int nota;  //será utilizada depois
 int duracao; //também será utilizada depois
-
+	```
 Chegamos na parte principal do código: Escrever o código para a criação da música. Para isso, serão declarados dois vetores: no primeiro vetor será colocado as notas musicais, o segundo fará referência ao tempo que essa nota irá soar. Assim, o resultado para a música Garota de Ipanema será:
+ 	```cpp
 int notas[] = {
  	NOTA_D5, NOTA_B4,NOTA_B4,NOTA_A4,
 	NOTA_D5, NOTA_B4,NOTA_B4,NOTA_B4,NOTA_A4,
@@ -102,12 +106,18 @@ int tempos[]{
   t1,t1,t1,t05,t05,
   t1,t4
 };
-Na sequência, vamos declarar a porta de entrada do buzzer
+```
+
+Na sequência, vamos declarar a porta de entrada do buzzer:
+```cpp
 void setup()
 {
   pinMode(buzzer, OUTPUT);
 }
+```
+
 Por fim, utilizaremos a função “for” para unir os dois vetores formando a melodia:
+ ```cpp
 void loop()
 {
   //sizeof(notas) = valor das notas dentro do vetor em bits
@@ -121,13 +131,15 @@ void loop()
   }  
   delay(5000);// tempo para a melodia começar de novo
 }
+	```
+
 Pronto! Agora já temos um código que tocará uma parte da música Garota de Ipanema. Caso tenha se interessado em fazer outras canções, abaixo seguem informações de teoria musical básica. Além disso, para facilitar a escrita da música, separe os compassos da melodia em linhas diferentes nos vetores nota e tempo.
 Oitavas: Forma de separar a escala musical de dó até si. A 4ª oitava é a principal para a maioria das músicas.
-Nome das notas:
 <div align="center">
-<h3>Figura 2:Circuito
+<h3>Figura 4:Nome das notas
 </h3>	 
-<<img width="280" height="95" alt="image" src="https://github.com/user-attachments/assets/95d5b4dc-ab0e-42ee-ba35-ddf6eae162ff" />
+<img width="197" height="230" alt="image" src="https://github.com/user-attachments/assets/52e9c472-4eb1-46a1-a255-bbc0eae63cd0" />
+ />
  />
 />
 <h4>Fonte: Autoria própria </h4>
@@ -135,3 +147,5 @@ Nome das notas:
 
 Então, seguindo os conceitos musicais anteriores, o dó na 4ª oitava seria representado em nosso código com C4. Obs: “S” depois da letra da nota se refere ao seu sustenido.
 Tempo/valor das notas musicais:
+
+
