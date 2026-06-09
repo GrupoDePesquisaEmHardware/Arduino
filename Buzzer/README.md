@@ -31,6 +31,7 @@ Com todas as informações citadas, já é possível fazer melodias utilizando p
 - 1 resistor (1 kΩ); 
 - 1 buzzer passivo.
 ### Montagem do Circuito
+
 	Na protoboard, foi escolhido dois pontos quaisquer para colocar os pinos do buzzer. Após isso, o  resistor é conectado na mesma coluna do polo positivo ou negativo do buzzer (nesse exemplo está no positivo), a fim de proteger os componentes. Por fim, o jumper roxo será ligado em uma das portas digitais, no caso a porta digital 3, e na protoboard na coluna do resistor. Já o jumper preto será conectado no GND do arduino e na coluna do pino negativo do buzzer. Espera-se como resultado algo parecido com o seguinte modelo:
 
 <div align="center">
