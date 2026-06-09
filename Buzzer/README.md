@@ -45,6 +45,7 @@ Com todas as informações citadas, já é possível fazer melodias utilizando p
 # Código
 Primeiramente, é necessário definir essas partes importantes  do código, para que seja possível a criação de qualquer melodia.
 Quanto à frequência das notas musicais:
+
 	```cpp
 // Oitava 4 (Oitava Central)
 #define NOTA_C4 262
@@ -79,14 +80,18 @@ Quanto aos tempos das notas:
 #define t05 250 //colcheia
 #define t025 125//semicocheia
  ```
+
 Após essas configurações iniciais, declare as variáveis buzzer, ritmo, nota e duração.
+
 	```cpp
 int buzzer = 3;
 int ritmo = 1.5;//serve para acelerar ou desacelerar a música
 int nota;  //será utilizada depois
 int duracao; //também será utilizada depois
 	```
+
 Chegamos na parte principal do código: Escrever o código para a criação da música. Para isso, serão declarados dois vetores: no primeiro vetor será colocado as notas musicais, o segundo fará referência ao tempo que essa nota irá soar. Assim, o resultado para a música Garota de Ipanema será:
+
  	```cpp
 int notas[] = {
  	NOTA_D5, NOTA_B4,NOTA_B4,NOTA_A4,
@@ -109,6 +114,7 @@ int tempos[]{
 ```
 
 Na sequência, vamos declarar a porta de entrada do buzzer:
+
 ```cpp
 void setup()
 {
@@ -117,6 +123,7 @@ void setup()
 ```
 
 Por fim, utilizaremos a função “for” para unir os dois vetores formando a melodia:
+
  ```cpp
 void loop()
 {
