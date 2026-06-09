@@ -32,6 +32,7 @@ Com todas as informações citadas, já é possível fazer melodias utilizando p
 - 1 protoboard mini;
 - 1 resistor (1 kΩ); 
 - 1 buzzer passivo.
+  
 ### Montagem do Circuito
 
 	Na protoboard, foi escolhido dois pontos quaisquer para colocar os pinos do buzzer. Após isso, o  resistor é conectado na mesma coluna do polo positivo ou negativo do buzzer (nesse exemplo está no positivo), a fim de proteger os componentes. Por fim, o jumper roxo será ligado em uma das portas digitais, no caso a porta digital 3, e na protoboard na coluna do resistor. Já o jumper preto será conectado no GND do arduino e na coluna do pino negativo do buzzer. Espera-se como resultado algo parecido com o seguinte modelo:
@@ -63,6 +64,7 @@ Quanto à frequência das notas musicais:
 #define NOTA_A4 440
 #define NOTA_AS4 466
 #define NOTA_B4 494
+
 // Oitava 5
 #define NOTA_C5 523
 #define NOTA_CS5 554
@@ -76,26 +78,35 @@ Quanto à frequência das notas musicais:
 #define NOTA_A5 880
 #define NOTA_AS5 932
 #define NOTA_B5 988
+	```
+	
 Quanto aos tempos das notas:
+
+ ```cpp
+
 #define t4 2000 //semibreve
 #define t2 1000 //mínima
 #define t1 500 //semínima
 #define t05 250 //colcheia
 #define t025 125//semicocheia
+
 	 ```
 
 Após essas configurações iniciais, declare as variáveis buzzer, ritmo, nota e duração.
 
 	```cpp
+
 int buzzer = 3;
 int ritmo = 1.5;//serve para acelerar ou desacelerar a música
 int nota;  //será utilizada depois
 int duracao; //também será utilizada depois
+
 	```
 
 Chegamos na parte principal do código: Escrever o código para a criação da música. Para isso, serão declarados dois vetores: no primeiro vetor será colocado as notas musicais, o segundo fará referência ao tempo que essa nota irá soar. Assim, o resultado para a música Garota de Ipanema será:
 
  	```cpp
+
 int notas[] = {
  	NOTA_D5, NOTA_B4,NOTA_B4,NOTA_A4,
 	NOTA_D5, NOTA_B4,NOTA_B4,NOTA_B4,NOTA_A4,
@@ -114,20 +125,24 @@ int tempos[]{
   t1,t1,t1,t05,t05,
   t1,t4
 };
+
 ```
 
 Na sequência, vamos declarar a porta de entrada do buzzer:
 
 ```cpp
+
 void setup()
 {
   pinMode(buzzer, OUTPUT);
 }
+
 ```
 
 Por fim, utilizaremos a função “for” para unir os dois vetores formando a melodia:
 
  ```cpp
+
 void loop()
 {
   //sizeof(notas) = valor das notas dentro do vetor em bits
@@ -141,10 +156,13 @@ void loop()
   }  
   delay(5000);// tempo para a melodia começar de novo
 }
+
 	```
 
 Pronto! Agora já temos um código que tocará uma parte da música Garota de Ipanema. Caso tenha se interessado em fazer outras canções, abaixo seguem informações de teoria musical básica. Além disso, para facilitar a escrita da música, separe os compassos da melodia em linhas diferentes nos vetores nota e tempo.
+
 Oitavas: Forma de separar a escala musical de dó até si. A 4ª oitava é a principal para a maioria das músicas.
+
 <div align="center">
 <h3>Figura 4:Nome das notas
 </h3>	 
