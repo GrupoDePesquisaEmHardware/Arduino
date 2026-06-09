@@ -176,7 +176,7 @@ Então, seguindo os conceitos musicais anteriores, o dó na 4ª oitava seria rep
 <h3>Figura 4:Tempo das notas
 </h3>
 <img width="197" height="230" alt="image" src="https://github.com/user-attachments/assets/52e9c472-4eb1-46a1-a255-bbc0eae63cd0" />
-<h4>Fonte: Autoria própria </h4>
+<h4>Fonte: Pinterest </h4>
 </div>
 
 - **Ritmo:** O que irá ditar a duração dos valores das notas.
