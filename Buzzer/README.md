@@ -19,7 +19,9 @@ Já o buzzer ativo tem um diferencial importante em sua estrutura: ele possui um
 </div>
 
 ## Função “tone”
+
 	Essa função é fundamental para o funcionamento do buzzer passivo, a qual declara a frequência e o tempo de duração em que o componente funcionará. Sua sintaxe básica é: “tone(pino,frequência,duração em ms)”.
+	
 É importante apresentar também a função “noTone”, a qual interrompe o sinal de onda enviada pelo “tone”. A sintaxe básica é: “noTone(pino)”.
 
 # Projeto - Tocando Garota de Ipanema
@@ -43,6 +45,7 @@ Com todas as informações citadas, já é possível fazer melodias utilizando p
 </div>
 
 # Código
+
 Primeiramente, é necessário definir essas partes importantes  do código, para que seja possível a criação de qualquer melodia.
 Quanto à frequência das notas musicais:
 
@@ -79,7 +82,7 @@ Quanto aos tempos das notas:
 #define t1 500 //semínima
 #define t05 250 //colcheia
 #define t025 125//semicocheia
- ```
+	 ```
 
 Após essas configurações iniciais, declare as variáveis buzzer, ritmo, nota e duração.
 
