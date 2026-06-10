@@ -43,8 +43,7 @@ Já o jumper preto será conectado no GND do arduino e na coluna do pino negativ
 <div align="center">
 <h3>Figura 2:Circuito
 </h3>	 
-<img width="456" height="173" alt="image" src="https://github.com/user-attachments/assets/16e79a29-5a0c-43db-9e63-c836a6bec3dc" />
-/>
+<img width="456" height="173" alt="image" src="https://github.com/user-attachments/assets/16e79a29-5a0c-43db-9e63-c836a6bec3dc"/>
 <h4>Fonte: Autoria própria </h4>
 </div>
 
