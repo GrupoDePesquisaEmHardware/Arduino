@@ -1,6 +1,4 @@
-<img width="499" height="232" alt="SENSOR" src="https://github.com/user-attachments/assets/7adb1bc2-9129-4855-96af-00701670a814" /># Módulo RFID RC522
-
-**Autor:** Marcius Gayber de Lima Pinto Júnior
+# Módulo RFID RC522
 
 ---
 
@@ -33,7 +31,8 @@ Quando a tag se aproxima do leitor, o campo eletromagnético gerado induz uma co
 
 ### Figura 1– Funcionamento do Sensor RFID
 <img width="494" height="243" alt="RFIDEXPL" src="https://github.com/user-attachments/assets/9838fa2b-0794-4f64-a000-fd5889e3de09" />
-*Fonte: [GTA UFRJ]([https://meusite.com](https://www.gta.ufrj.br/grad/07_1/rfid/RFID_arquivos/como%20funciona.htm))*
+
+*Fonte: [GTA UFRJ](https://www.gta.ufrj.br/grad/07_1/rfid/RFID_arquivos/como%20funciona.htm)*
 
 ---
 
@@ -108,8 +107,7 @@ No módulo **RC522**, a comunicação com o Arduino é realizada através do pro
 ### Figura 2 – Sensor RFID com pinos identificados
 <img width="499" height="232" alt="SENSOR" src="https://github.com/user-attachments/assets/8d303930-0ee3-4219-b7a0-dcc3c44331a5" />
 
-
-*Fonte:[DIY Engineers]([https://meusite.com](https://www.diyengineers.com/2021/04/15/learn-how-to-read-an-rfid-tag-with-rc522-and-arduino/))*
+*Fonte:[DIY Engineers](https://www.diyengineers.com/2021/04/15/learn-how-to-read-an-rfid-tag-with-rc522-and-arduino/)*
 
 ---
 
@@ -132,7 +130,6 @@ Agora vamos colocar a teoria em prática montando um circuito simples utilizando
 
 ### Figura 3 – Circuito montado
 <img width="631" height="457" alt="CIRCUITO" src="https://github.com/user-attachments/assets/d845be8b-808c-458e-8511-d9154de35647" />
-
 
 *Fonte: Autoria própria (Wokwi)*
 
@@ -288,3 +285,7 @@ Ao aproximar uma tag RFID do módulo RC522:
 O módulo RFID RC522 é uma solução simples e de baixo custo para sistemas de identificação por radiofrequência. Sua integração com o Arduino permite desenvolver aplicações como controle de acesso, autenticação de usuários, automação residencial, controle de presença e rastreamento de objetos.
 
 Por meio deste projeto foi possível compreender os conceitos fundamentais da tecnologia RFID, sua comunicação através do protocolo SPI e a implementação prática de um sistema básico de identificação utilizando Arduino.
+
+
+
+**Autor:** [Marcius Gayber de Lima Pinto Júnior](https://github.com/)
