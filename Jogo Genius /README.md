@@ -383,3 +383,8 @@ digitalWrite(leds[resposta], HIGH);
 
 Dessa forma, o código implementa o funcionamento do jogo Genius, controlando o display LCD, os LEDs, os botões e o buzzer para criar uma experiência interativa de memória e repetição de sequências.
 
+##Link do circuito no Tinkercad
+https://www.tinkercad.com/things/19y8SbSat9f-jogo-genius?sharecode=FLN4oIqt3LbkPyG3KWFDv71C90uxKMTQ-K9q6nKwod0
+
+## Contribuidor
+- [Mariana Ferreira](https://github.com/MarianaFerreira)
