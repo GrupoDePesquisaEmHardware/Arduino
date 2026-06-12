@@ -36,7 +36,7 @@ Lançado originalmente em 1978 pela empresa Milton Bradley, o jogo chegou às lo
 ## Funcionamento do Circuito
 
 <div align="center">
-<h3>Figura 3: Funcionamento do circuito. </h3>	
+<h3>Figura 3: Montagem do circuito. </h3>	
 <img width="922" height="571" alt="image" src="https://github.com/user-attachments/assets/53573d61-189e-4ce3-bf4a-9a62c88623b3" />
 <h4>Fonte: Autoria própria.</h4>
 </div>
@@ -178,7 +178,7 @@ O laço “while(!gameOver)” mantém o jogo em execução enquanto o jogador n
 O display exibe a pontuação atual, o recorde e o nível em que o jogador se encontra.
 
 ```cpp
-lcd.clear();
+    lcd.clear();
     lcd.print("P:");
     lcd.print(rodada - 1);
 
@@ -195,7 +195,7 @@ lcd.clear();
 Em seguida, a função “mostrarSequencia()” é chamada para acender os LEDs e reproduzir os sons correspondentes à sequência gerada. Após essa ação, o display informa que é a vez do jogador repetir a sequência.
 
 ```cpp
-mostrarSequencia();
+    mostrarSequencia();
 
     lcd.clear();
     lcd.print("P:");
