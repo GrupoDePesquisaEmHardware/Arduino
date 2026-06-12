@@ -15,7 +15,7 @@ Uma das preocupações era escolher sons agradáveis, e Bear encontrou a soluç�
 Lançado originalmente em 1978 pela empresa Milton Bradley, o jogo chegou às lojas brasileiras somente em 1980 pela Brinquedos Estrela, onde ganhou o nome de “Genius” e tornou-se o pioneiro nos jogos eletrônicos de massa. Com seu icônico formato de “ovni”, consiste em um disco com quatro botões coloridos (azul, amarelo, verde e vermelho) que acendem e emitem sons em sequência (Figura 2).
 
 <div align="center">
-<h3>Figura 1: Jogo Genius, da Brinquedos Estrela. </h3>	
+<h3>Figura 2: Jogo Genius, da Brinquedos Estrela. </h3>	
 <img width="770" height="569" alt="image" src="https://github.com/user-attachments/assets/644e6c51-f55a-446c-a2db-fae588d40ed4" />
 <h4>Fonte: Amazon (2026).</h4>
 </div>
@@ -36,9 +36,9 @@ Lançado originalmente em 1978 pela empresa Milton Bradley, o jogo chegou às lo
 ## Funcionamento do Circuito
 
 <div align="center">
-<h3>Figura 1: Jogo Genius, da Brinquedos Estrela. </h3>	
+<h3>Figura 3: Funcionamento do circuito. </h3>	
 <img width="922" height="571" alt="image" src="https://github.com/user-attachments/assets/53573d61-189e-4ce3-bf4a-9a62c88623b3" />
-<h4>Fonte: Amazon (2026).</h4>
+<h4>Fonte: Autoria própria.</h4>
 </div>
 
 Para a montagem do circuito do jogo Genius com Arduino, começamos pela alimentação da protoboard. Utilizamos jumpers para conectar o pino 5V do Arduino aos barramentos positivos da protoboard e o pino GND aos barramentos negativos, distribuindo energia para todos os componentes do circuito.
@@ -52,6 +52,15 @@ Para a transmissão das informações, o display opera no modo de 4 bits. Dessa 
 O jogo utiliza quatro LEDs coloridos (vermelho, azul, amarelo e verde), que indicam a sequência que o jogador deve repetir. Cada LED é conectado a uma porta digital do Arduino e, através de um resistor de 150Ω, os terminais negativos dos LEDs são ligados ao GND.
 
 Logo acima dos LEDs encontram-se quatro botões de pressão, utilizados para que o jogador reproduza a sequência apresentada. Cada botão é ligado a uma entrada digital do Arduino. Para garantir leituras estáveis, são utilizados resistores de pull-down (10 kΩ), mantendo o sinal em nível lógico baixo quando o botão não está pressionado.
+
 O circuito também possui um buzzer piezoelétrico, responsável pela emissão dos sons característicos do jogo. Seu terminal positivo é ligado a uma porta digital do Arduino, através do resistor de 220Ω, o que permite a geração de diferentes frequências, enquanto o terminal negativo é conectado ao GND.
+
 Com todas essas conexões realizadas, o Arduino passa a controlar os LEDs, ler os botões pressionados pelo jogador, emitir sons pelo buzzer e exibir informações no display LCD, formando o funcionamento completo do jogo Genius eletrônico.
 
+## Código
+
+Para executarmos corretamente o jogo Genius, precisamos compreender o funcionamento do código passo a passo. Primeiramente, incluímos a biblioteca “LiquidCrystal.h”, responsável por fornecer as funções necessárias para controlar o display LCD. Após esse passo, criamos o objeto “lcd” do tipo Liquid Crystal, informando quais pinos do Arduino estão conectados aos pinos de controle e de dados do display.
+---cpp
+#include <LiquidCrystal.h>
+LiquidCrystal lcd(A0, A1, A2, A3, A4, A5);
+---
