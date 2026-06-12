@@ -61,7 +61,7 @@ Com todas essas conexões realizadas, o Arduino passa a controlar os LEDs, ler o
 
 Para executarmos corretamente o jogo Genius, precisamos compreender o funcionamento do código passo a passo. Primeiramente, incluímos a biblioteca “LiquidCrystal.h”, responsável por fornecer as funções necessárias para controlar o display LCD. Após esse passo, criamos o objeto “lcd” do tipo Liquid Crystal, informando quais pinos do Arduino estão conectados aos pinos de controle e de dados do display.
 
----cpp
+```cpp
 #include <LiquidCrystal.h>
 LiquidCrystal lcd(A0, A1, A2, A3, A4, A5);
----
+```
