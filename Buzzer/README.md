@@ -185,22 +185,4 @@ Então, seguindo os conceitos musicais anteriores, o dó na 4ª oitava seria rep
 
 - **Ritmo:** O que irá ditar a duração dos valores das notas.
 
-
-### Link do projeto no tinkercad:  
-https://www.tinkercad.com/things/h1JvPxF3vxH-ipanema?sharecode=TuIB1-OeC9HM_5AL249t0q76lFFzwLKa_Jx1XxGPddk
-
-- Referências:
-  
-	> Vídeos:
-	> - https://youtu.be/ea1jRH4DCkI?si=0Ug3CFnTAtLBgsgP
- 	> - https://www.youtube.com/watch?v=ZiJysMy0f5c
-    > - https://www.youtube.com/watch?v=4nNwrroQI_Y
-
-	
-
-	> Sites: - https://www.circuitbasics.com/how-to-use-active-and-passive-buzzers-on-the-arduino/
- 	> - https://www.makerhero.com/guia/componentes-eletronicos/buzzer/?srsltid=AfmBOoouqNBmAqJR9UzMBVxzLyeqcU9G714xKFjllwtLtbLVhsgJn7M5
-	> - https://www.arduinoportugal.pt/qual-diferenca-buzzer-ativo-vs-buzzer-passivo/
-	> - https://www.bosontreinamentos.com.br/eletronica/arduino/arduino-conhecendo-as-funcoes-tone-e-notone/
-
 Autoria: Sara Cunha Leite.
