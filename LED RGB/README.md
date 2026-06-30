@@ -118,4 +118,6 @@ void loop(){
   delay(700);
 }
 ```
+## Colaboradores
 
+- [Rikelmy](https://github.com/Rikelmy31)
