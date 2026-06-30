@@ -38,7 +38,7 @@ Onde D representa o ciclo de trabalho, sendo a porcentagem de tempo em que o sin
 <p>Fonte: https://www.mundodaeletrica.com.br/pwm-o-que-e-para-que-serve/<p>
 </div>
 
-<h2> Materiais Necessários <h2/>
+### Materiais Necessários
 
 - 1 Led RGB
 - 1 Arduino UNO
