@@ -22,7 +22,7 @@ Existem dois tipos desse LED: o ânodo comum e o cátodo comum. Essa diferencia�
 <p>Fonte: https://www.squids.com.br/arduino/software/dicas-de-software/372-led-rgb-anodo-comum-ou-o-led-rgb-catodo-comum-como-identificar-e-usar-com-arduino-cirucito-e-programacao<p>
 </div>
 
-<h2>O que é PWM?<h2/>
+### O que é PWM?
 
 Agora que já sabemos como o PWM(Pulse Width Modulation ) auxilia no funcionamento do LED RGB, você sabe como ele funciona?
 O PWM funciona controlando a tensão média que vai para o LED, e esse cálculo é definido pela variação da largura dos pulsos de um sinal elétrico. Quando temos um sinal sendo recebido, chamamos isso de largura de pulso, quanto maior ela for, mais tensão chega aos LEDs. Dividindo essa largura pelo período (que é o tempo total de uma onda), conseguimos calcular o ciclo de trabalho. Veja a fórmula abaixo:
@@ -46,7 +46,7 @@ Onde D representa o ciclo de trabalho, sendo a porcentagem de tempo em que o sin
 - 4 jumpers 
 - 1 Protoboard
 
-<h2>Circuito<h2/>
+### Circuito
 
 Neste circuito, iremos demonstrar a utilização do LED RGB e gerar diferentes cores utilizando o PWM. 
 
@@ -60,7 +60,7 @@ Neste circuito, iremos demonstrar a utilização do LED RGB e gerar diferentes c
 Para montar o circuito, iremos conectar os pinos vermelho, verde e azul nas portas 9, 10 e 11 do Arduino, utilizando resistores de 220Ω  em cada uma delas, e conectando o cátodo comum ao GND do Arduino.
 A escolha dessas portas é importante para o funcionamento do projeto, podendo ser trocadas apenas por outras que tenham um til(~) ao lado do número, visto que estas são as únicas portas digitais do Arduino Uno que suportam o sinal PWM. Isso ocorre porque as demais portas funcionam apenas com os estados ligado (5V) e desligado (0V), não conseguindo controlar de forma gradual a intensidade luminosa do LED. 
 
-<h2>Código<h2/>
+### Código 
 
 Para começarmos nosso código, iremos definir os pinos do nosso circuito utilizando o #define. Ele cria constantes para cada uma das cores: 
 ```cpp
