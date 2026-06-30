@@ -119,9 +119,3 @@ void loop(){
 }
 ```
 
-<h2>Referências<h2/>
-
-FERREIRA, A. L. Led RGB anodo comum ou o Led RGB catodo comum? Como identificar e usar com Arduino (circuito e programação). Disponível em: <https://www.squids.com.br/arduino/software/dicas-de-software/372-led-rgb-anodo-comum-ou-o-led-rgb-catodo-comum-como-identificar-e-usar-com-arduino-cirucito-e-programacao>.
-
-PWM – O que é e para que serve? - Mundo da Elétrica. Disponível em: <https://www.mundodaeletrica.com.br/pwm-o-que-e-para-que-serve/>.
-‌
