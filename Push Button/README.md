@@ -154,7 +154,7 @@ pinMode(botao, INPUT_PULLUP);
 
 Agora, se entenderam e seguiram todas as instruções, vocês conseguiram ligar o botão de maneira correta e funcionando bem. Contudo, a depender do projeto em que você queira adicionar o push button, pode haver um problema de leitura, pois os botões são feitos de pequenas placas metálicas que podem causar pequenas vibrações e por consequência, várias leituras indesejadas. Isso é chamado de  efeito “bouncing”, mas não se preocupe, existe uma maneira de resolver isso através do “debounce”, que é explicado neste material [Debounce Button](https://github.com/GrupoDePesquisaEmHardware/Arduino/tree/6eccbfedbeac836ce2f4a751d2a1707bf2e20419/Debounce%20Button). Agradeço a leitura e até a próxima.
 
-Link do circuito pull-up externo no tinkercad:
+Link do circuito pull-down externo no tinkercad:
 
 https://www.tinkercad.com/things/hAnxHzENGbJ-cool-stantia-rottis?sharecode=3Iu_9VK-pS53y6Ate3SuCoe_7bVEcmhb2N5Gwht5FvM
 
