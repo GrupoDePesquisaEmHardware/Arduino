@@ -39,10 +39,10 @@ O botão possui 4 terminais divididos em dois pares interligados internamente A-
 <table border="0">
   <tr>
     <td width="50%" align="center" valign="top">
-      <h3>Figura 2 - Circuito NF (repouso)</h3>
+      <h3>Figura 2 - Circuito NA (repouso)</h3>
     </td>
     <td width="50%" align="center" valign="top">
-      <h3>Figura 3 - Circuito NF (pressionado)</h3>
+      <h3>Figura 3 - Circuito NA (pressionado)</h3>
     </td>
   </tr>
   <tr>
