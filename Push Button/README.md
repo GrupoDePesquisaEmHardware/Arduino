@@ -3,7 +3,7 @@ Você sabe o que é Push Button?  Vem cá que eu te explico!
 
 Push button, botão de pressão ou ainda chave táctil, é um interruptor simples, o qual fará ações de permitir ou interromper a passagem de corrente elétrica ao pressionar ou soltar o botão. 
 <div align="center">
-<h3>Figura 1:Botão e seus terminais </h3> 
+<h3>Figura 1: Botão e seus terminais </h3> 
 <img width="800" height="345" alt="Image" src="https://github.com/user-attachments/assets/3952e89b-443b-4bc9-bd27-22409dea0b7f" />
 <h4>Fonte: ROBOCORE (Módulo Relé Serial - Acionamento por Botão) </h4>
 </div>
