@@ -164,7 +164,7 @@ https://www.tinkercad.com/things/klDDDvqrcbe-shiny-turing?sharecode=q2ijc8HkVCTr
 
 Link do circuito pull-up interno no tinkercad:
 
-https://github.com/GrupoDePesquisaEmHardware/Arduino/tree/6eccbfedbeac836ce2f4a751d2a1707bf2e20419/Debounce%20Button
+https://www.tinkercad.com/things/jOT3kSQdVhL-amazing-gogo?sharecode=jFMax_8se38UA1EHm45m3r_7imRXUjj5uHQnI4MRhPM
 
 # Contribuidor
 
