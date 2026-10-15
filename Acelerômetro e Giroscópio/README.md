@@ -50,3 +50,78 @@ Para o projeto, precisamos dos seguintes componentes:
 - Protoboard 400 pontos;
 - Cabo USB Mini-B;
 - Jumpers Macho-Macho.
+
+Com os componentes separados, podemos iniciar a montagem do circuito dessa forma:
+
+<div align="center">
+<h1> Tabela 2 - Arquitetura de montagem </h1>
+  
+| Componente | Pino no Componente | Pino no Arduino |
+|:---:|:---:|:---:|
+| ADXL345 | VCC | 3.3V |
+| ADXL345 | GND | GND |
+| ADXL345 | SDA/SCL | A4/A5 |
+
+<h1> Fonte: Autoria própria </h1>
+</div>
+
+As ligações são simples. O VCC do componente é alimentado com 3.3V pelo Arduino, o GND é ligado ao GND (Terra) do Arduino e os pinos SDA (Envio dos dados de Aceleração e Inclinação) e SCL (Sincroniza o tempo de conversa entre os componentes para que nenhum dado se perca) são conectados, respectivamente, nos pinos A4 e A5 do Arduino pois, no Arduino UNO, apenas estes pinos possuem a função específica de comunicação I2C, onde o pino A4 atua como SDA ( Serial Data ) para o transporte de dados e o pino A5 atua como SCL ( Serial Clock ) para a sincronização de tempo entre os dispositivos. A comunicação I2C, por sua vez, funciona através de uma estrutura que utiliza apenas dois fios e permite que um dispositivo controlador “ converse “ e leia dados de outros dispositivos, utilizando um endereço único para cada componente.
+
+# Código	
+
+Depois da montagem, vem a parte lógica do projeto, o **código**. A ideia é: obter as acelerações nos eixos **X** e **Y** ( representando os movimentos de rolagem e arfagem, respectivamente ) em m/s² e, no eixo Z,  a aceleração da gravidade, que é uma força constante sobre o sensor. Essa referência torna-se fundamental pois, é a partir dela que o código consegue identificar a inclinação da aeronave.
+
+A proposta do código é mostrar as principais estruturas que são usadas no módulo ADXL345 de forma simples e a linha de pensamento para a montagem.
+
+Neste exemplo, devemos incluir as bibliotecas:
+```cpp
+
+#include <Wire.h>
+#include <Adafruit_ADXL345_U.h>
+
+```
+
+São elas que vão habilitar a comunicação do tipo I2C e traduzir os sinais elétricos enviados do sensor para valores reais e calibrados na unidade de medida.
+
+```cpp
+
+void setup() {
+  Serial.begin(9600);
+  if(!accel.begin()) {
+    Serial.println("Erro ao iniciar o ADXL345");
+    while(1);
+  }
+}
+
+```
+
+Na função acima, o código tenta inicializar a comunicação entre os componentes e, caso a conexão falhe ( por defeito, falha ou erro na fiação ), o programa exibe a mensagem de erro e trava, evitando leituras erradas.
+
+Na parte principal do programa temos a leitura dos dados, que vão nos trazer todas as informações de inclinação. 
+
+```cpp
+
+void loop(void) {
+  sensors_event_t event;
+  accel.getEvent(&event);
+
+```
+
+Por fim, para podermos ver e analisar os dados que estão sendo entregues pelo sensor, imprimimos as informações no serial monitor, dessa forma:
+
+```cpp
+Serial.print("Aceleracao X na rolagem: "); 
+  Serial.print(event.acceleration.x); 
+  Serial.print(" m/s^2 | ");
+  
+  Serial.print("Aceleracao Y na arfagem: "); 
+  Serial.print(event.acceleration.y); 
+  Serial.print(" m/s^2 | ");
+  
+  Serial.print("Z: "); 
+  Serial.print(event.acceleration.z); 
+  Serial.println(" m/s^2");
+
+  delay(500);
+}
+```
