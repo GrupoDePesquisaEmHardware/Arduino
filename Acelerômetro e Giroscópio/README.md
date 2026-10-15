@@ -46,7 +46,7 @@ O projeto que vamos fazer será de um **Sistema de Controle de Atitude para Avi�
 Para o projeto, precisamos dos seguintes componentes:
 
 - Módulo ADXL345  (Acelerômetro);
-Arduino UNO (ou qualquer outro Arduino);
-Protoboard 400 pontos;
-Cabo USB Mini-B;
-Jumpers Macho-Macho;
+- Arduino UNO (ou qualquer outro Arduino);
+- Protoboard 400 pontos;
+- Cabo USB Mini-B;
+- Jumpers Macho-Macho.
