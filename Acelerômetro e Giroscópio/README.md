@@ -25,3 +25,28 @@ Já conhecemos o acelerômetro, agora, vamos entender o que é e como funciona o
 Nesse momento você deve estar se perguntando: "Mas como eu consigo fazer uma aplicação disso em projetos eletrônicos?" Para tirar essa tecnologia da teoria e levá-la para a prática, utilizamos módulos (dispositivos eletrônicos dos sensores) prontos que facilitam a comunicação entre esses sensores e os microcontroladores como o Arduino ou o ESP32.
 
 Na tabela abaixo estão os três módulos mais comuns no mercado e nos projetos e suas principais características e diferenças.
+
+<div align="center">
+<h1> Tabela 1 - Definição dos módulos utilizados na prática </h1>
+
+| Módulo | Tipo de Sensor | Diferencial |
+|:---:|---|---|
+| MPU-6050 | Acelerômetro e Giroscópio | O mais popular e barato; ótimo para estabilização de robôs. |
+| MPU-9250 | Acelerômetro, Giroscópio e Magnetômetro | Possui uma bússola integrada, sendo ideal para drones e sistemas de navegação. |
+| ADXL345 | Acelerômetro | Baixo consumo de energia; ideal para projetos simples de inclinação. |
+<h2> Fonte: Autoria própria </h2>
+</div>
+
+Agora que conhecemos o acelerômetro, o giroscópio,  os seus respectivos componentes eletrônicos respectivos e o seu funcionamento, por que não fazer um projeto?
+
+O projeto que vamos fazer será de um **Sistema de Controle de Atitude para Aviões** (Monitoramento de Inclinação dos Eixos do avião). A proposta é  criar um protótipo que leia a aceleração nos eixos da aeronave e a angulação da **Arfagem** (Movimento de “subir e descer” a ponta do avião) e da **Rolagem** (Inclinação das asas para esquerda ou direita) e apresentar esses dados no monitor serial. 
+
+# Materiais necessários
+
+Para o projeto, precisamos dos seguintes componentes:
+
+- Módulo ADXL345  (Acelerômetro);
+Arduino UNO (ou qualquer outro Arduino);
+Protoboard 400 pontos;
+Cabo USB Mini-B;
+Jumpers Macho-Macho;
