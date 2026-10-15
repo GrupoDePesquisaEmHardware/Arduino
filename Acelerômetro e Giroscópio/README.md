@@ -125,3 +125,7 @@ Serial.print("Aceleracao X na rolagem: ");
   delay(500);
 }
 ```
+Para elevar o nível do projeto, vou te propor um desafio! Você consegue fazer sistema independente do computador utilizando o display LCD para visualização dos dados e uma bateria? Para te ajudar, o Grupo de Pesquisa em Hardware (GPH) preparou um guia completo com todas as instruções, modo de funcionamento e muito mais. [Clique aqui para acessar](./Display%20LCD/README.md)
+
+# Contribuidores
+
