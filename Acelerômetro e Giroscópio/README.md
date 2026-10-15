@@ -9,5 +9,19 @@
 <div align="center">
 <h3> Figura 1 - Efeito Piezoelétrico </h3>	
 <img width="627" height="330" alt="image" src="https://github.com/user-attachments/assets/e04633b4-a703-4772-8fc5-e4cb2ae11580" />
-<h4> Fonte: Adaptado de Lousada (2020)e </h4>
+<h4> Fonte: Adaptado de Lousada (2020) </h4>
 </div>
+
+No momento desse impacto, a parede atingida converte a pressão da bola em uma pequena corrente elétrica. Como o sensor tem três dimensões, ele possui três pares de paredes opostas, cada uma representando um eixo no espaço (X, Y e Z). O segredo do componente está em  analisar qual parede foi pressionada e qual a força exercida sobre ela.
+
+Já conhecemos o acelerômetro, agora, vamos entender o que é e como funciona o giroscópio!  Um giroscópio é um sensor que mede a **taxa de rotação** em relação a um sistema de referência inercial, ou seja, em repouso. Com isso, ele captura todas as mudanças subsequentes na orientação quando rotacionado. Na eletrônica, são usados os giroscópios MEMS ( sistemas microeletromecânicos de estrutura vibratória), que usam o princípio do **Efeito de Coriolis** para detectar as rotações. Dentro do dispositivo, pequenas placas de silício são mantidas em vibração para que, quando houver uma rotação, a força de Coriolis, uma pseudoforça que surge devido ao movimento de rotação do referencial não-inercial ( um sistema que está em rotação, como a Terra ), cause uma variação no movimento dessas placas, gerando um sinal de tensão que será convertido em valores de velocidade angular.
+
+<div align="center">
+<h3> Figura 2 - Funcionamento do Giroscópio MEMS </h3>	
+<img width="328" height="321" alt="image" src="https://github.com/user-attachments/assets/50918ca1-7519-4731-b017-1856246affc0"/>
+<h4> Fonte : Adaptado de Stuhler (2022) </h4>
+</div>
+
+Nesse momento você deve estar se perguntando: "Mas como eu consigo fazer uma aplicação disso em projetos eletrônicos?" Para tirar essa tecnologia da teoria e levá-la para a prática, utilizamos módulos (dispositivos eletrônicos dos sensores) prontos que facilitam a comunicação entre esses sensores e os microcontroladores como o Arduino ou o ESP32.
+
+Na tabela abaixo estão os três módulos mais comuns no mercado e nos projetos e suas principais características e diferenças.
