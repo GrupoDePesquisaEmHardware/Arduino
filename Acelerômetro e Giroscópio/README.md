@@ -130,3 +130,4 @@ Para elevar o nível do projeto, vou te propor um desafio! Você consegue fazer 
 # Contribuidores
 
 - <p><a href="https://github.com/RonaldLucas19">Ronald Lucas</a></p>
+- <p><a href="https://github.com/luizlopesmec">Luiz Lopes</a></p>
