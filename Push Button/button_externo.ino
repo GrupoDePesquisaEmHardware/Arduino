@@ -1,7 +1,6 @@
 ///este codigo eh referente aos modos pullup e pulldown externo do botao
 
-#define botao 2
-int estado_botao = 0;
+int botao = 2;
 void setup()
 {
   pinMode(botao, INPUT);
