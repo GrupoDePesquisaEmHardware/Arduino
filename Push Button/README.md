@@ -101,13 +101,13 @@ Agora vamos montar o código?  Este código funciona para os dois primeiros modo
 int botao = 2;
 ```
 
-Em seguida, no ```cpp void setup()```, iremos configurar o modo de operação do pino do botão como INPUT e a comunicação serial:
+Em seguida, no ```void setup()```, iremos configurar o modo de operação do pino do botão como INPUT e a comunicação serial:
 
 ```cpp
 pinMode(botao, INPUT);
 Serial.begin(9600);
 ```
-Na função ```cpp void loop()```, por hora queremos apenas testar os modos de funcionamento do push button, vamos com a ajuda do Serial.println() ver a leitura do estado atual do botão com o “digitalRead”:
+Na função ```void loop()```, por hora queremos apenas testar os modos de funcionamento do push button, vamos com a ajuda do Serial.println() ver a leitura do estado atual do botão com o “digitalRead”:
 
 ```cpp
 Serial.println(digitalRead(botao));
